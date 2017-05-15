@@ -32,7 +32,7 @@
 			$this->assign('data',$arr);
 			$this->display('index');
 		}
-		//发布景点页面
+		//发布酒店页面
 		public function addhotel(){
 			$this->display();
 		}
@@ -42,8 +42,8 @@
 			 $upload = new UploadFile();// 实例化上传类
 			 $upload->maxSize  = 314005728 ;// 设置附件上传大小
 			 $upload->allowExts  = array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
-			 $upload->savePath =  './Public/IMGS/tour/';// 设置附件上传目录
-			 if(!$upload->upload()) {// 上传错误提示错误信息
+			 $upload->savePath =  './Public/IMGS/hotel/';// 设置附件上传目录
+			 if(!$upload->upload()) {
 				// $this->error($upload->getErrorMsg());
 				$info=$upload->getErrorMsg();
 				$this->ajaxReturn($info,'json');
@@ -58,69 +58,57 @@
 				$data['url']=$save_url;
 				$data['status']=0;
 				$this->ajaxReturn($data,'json');
+				//$this->assign('img_url',$data);
+				//$this->display('addhotel');
 			 }
-			 
-			// var_dump($info);
-			
-			// $this->assign('img_url',$save_url);
-			//$this->display('addtour'); 
 			$this->ajaxReturn('不存在','JSON');
 		 }
-		 //发布景点信息存储
+		 //发布酒店信息存储
 		 public function do_addhotel(){
-			$t=M('Tourist');
-			$data['tname']=$_POST['tourname'];
-			$data['tcity']=$_POST['tourcolumn'];
-			$data['tlevel']=$_POST['tourlevel'];
-			$data['ttype']=$_POST['tourtype'];
-			$data['taddress']=$_POST['tourad'];
-			$data['tabstract']=$_POST['abstracts'];
-			$data['ticket']=$_POST['ticket'];
-			$data['tinfo']=$_POST['editorValue'];
-			$data['tbimg']=$_POST['file'];
-			$data['tline']=$_POST['tourline'];
+			$h=M('Hotel');
+			$data['hname']=$_POST['hotelname'];
+			$data['hcity']=$_POST['hotelcolumn'];
+			$data['hphone']=$_POST['hotelphone'];
+			$data['hlevel']=$_POST['hotellevel'];
+			$data['haddress']=$_POST['hoteladr'];
+			$data['hinfo']=$_POST['hotelinfo'];
+			$data['hbimg']=$_POST['imgfile'];
 			$data['aname']=$_POST['author'];
-			$data['tctime']=$_POST['commentdatemin'];
-			$tid = $t -> add($data);
-			if($tid && $tid>0){
-				$this->ajaxReturn($tid,'景点发布成功！','ok');
+			$data['hctime']=$_POST['commentdatemin'];
+			$hid = $h -> add($data);
+			if(isset($hid) && $hid>0){
+				$this->ajaxReturn($hid,'酒店发布成功！','ok');
 			}else{
-				$this->ajaxReturn(0,'景点发布失败！','error');
+				$this->ajaxReturn('0','酒店发布失败！','error');
 			}
 		 }
-		//更新景点信息页面
-		public function uptour(){
-			$t=M('Tourist');
-			$tid=$_GET['tid'];
-			$arr = $t -> find($tid);
-			var_dump($arr);
+		//更新酒店信息页面
+		public function uphotel(){
+			$h=M('Hotel');
+			$hid=$_GET['hid'];
+			$arr = $h -> find($hid);
 			$this->assign('data',$arr);
-			$this->display('uptour');
+			$this->display('uphotel');
 		}
 		//更新景点存入数据库
-		public function do_uptour(){
-			$t=M('Tourist');
-			//$data['tid']=$_POST['tid'];
-			$data['tname']=$_POST['tourname'];
-			$data['tcity']=$_POST['tourcolumn'];
-			$data['tlevel']=$_POST['tourlevel'];
-			$data['ttype']=$_POST['tourtype'];
-			$data['taddress']=$_POST['tourad'];
-			$data['tabstract']=$_POST['abstracts'];
-			$data['ticket']=$_POST['ticket'];
-			$data['tinfo']=$_POST['editorValue'];
-			$data['tbimg']=$_POST['file'];
-			$data['tline']=$_POST['tourline'];
+		public function do_uphotel(){
+			$h=M('Hotel');
+			$data['hname']=$_POST['hotelname'];
+			$data['hcity']=$_POST['hotelcolumn'];
+			$data['hphone']=$_POST['hotelphone'];
+			$data['hlevel']=$_POST['hotellevel'];
+			$data['haddress']=$_POST['hoteladr'];
+			$data['hinfo']=$_POST['hotelinfo'];
+			$data['hbimg']=$_POST['imgfile'];
 			$data['aname']=$_POST['author'];
-			$data['tctime']=$_POST['commentdatemin'];
-			var_dump($data);
-			$row = $t -> where('tid = $_POST["tid"]') -> save($data);
-			var_dump('-----------------------------');
-			var_dump($row);
-			if($rrow && $row>0){
-				$this->ajaxReturn($row,'景点更新成功！','ok');
+			$data['hctime']=$_POST['commentdatemin'];
+			$where['hid']=$_POST['hid'];
+			//var_dump($data);
+			$row = $h -> where($where) -> data($data) -> save();
+			if(isset($row) && $row>0){
+				$this->ajaxReturn($row,'酒店更新成功！','ok');
 			}else{
-				$this->ajaxReturn(0,'景点更新失败！','error');
+				$this->ajaxReturn('0','酒店更新失败！','error');
 			}
 		}
 		//删除酒店

@@ -63,10 +63,6 @@
 				$this->ajaxReturn($data,'json');
 			 }
 			 
-			// var_dump($info);
-			
-			// $this->assign('img_url',$save_url);
-			//$this->display('addtour'); 
 			$this->ajaxReturn('不存在','JSON');
 		 }
 		 //发布景点信息存储
@@ -88,7 +84,7 @@
 			if($tid && $tid>0){
 				$this->ajaxReturn($tid,'景点发布成功！','ok');
 			}else{
-				$this->ajaxReturn(0,'景点发布失败！','error');
+				$this->ajaxReturn('0','景点发布失败！','error');
 			}
 		 }
 		//更新景点信息页面
@@ -101,25 +97,30 @@
 		}
 		//更新景点存入数据库
 		public function do_uptour(){
-			$t=M('Tourist');
-			$data['tname']=$_POST['tourname'];
-			$data['tcity']=$_POST['tourcolumn'];
-			$data['tlevel']=$_POST['tourlevel'];
-			$data['ttype']=$_POST['tourtype'];
-			$data['taddress']=$_POST['tourad'];
-			$data['tabstract']=$_POST['abstracts'];
-			$data['ticket']=$_POST['ticket'];
-			$data['tinfo']=$_POST['editorValue'];
-			$data['tbimg']=$_POST['file'];
-			$data['tline']=$_POST['tourline'];
-			$data['aname']=$_POST['author'];
-			$data['tctime']=$_POST['commentdatemin'];
-			$where['tid'] = $_POST['tid'];
-			$row = $t->where($where)->data($data)->save();
-			if(isset($row) && $row>0){
-				$this->ajaxReturn($row,'景点更新成功！','ok');
+			//$m=M('Admin');
+			if($_SESSION['aname'] == $_POST['tourname']){
+				$t=M('Tourist');
+				$data['aname']=$_POST['aname'];
+				$data['tcity']=$_POST['tourcolumn'];
+				$data['tlevel']=$_POST['tourlevel'];
+				$data['ttype']=$_POST['tourtype'];
+				$data['taddress']=$_POST['tourad'];
+				$data['tabstract']=$_POST['abstracts'];
+				$data['ticket']=$_POST['ticket'];
+				$data['tinfo']=$_POST['editorValue'];
+				$data['tbimg']=$_POST['file'];
+				$data['tline']=$_POST['tourline'];
+				$data['aname']=$_POST['author'];
+				$data['tctime']=$_POST['commentdatemin'];
+				$where['tid'] = $_POST['tid'];
+				$row = $t->where($where)->data($data)->save();
+				if(isset($row) && $row>0){
+					$this->ajaxReturn($row,'景点更新成功！','ok');
+				}else{
+					$this->ajaxReturn('0','景点更新失败！','error');
+				}
 			}else{
-				$this->ajaxReturn('0','景点更新失败！','error');
+				$this->ajaxReturn('0','您没有权限修改他人发布的景点！','error');
 			}
 		}
 		//删除景点

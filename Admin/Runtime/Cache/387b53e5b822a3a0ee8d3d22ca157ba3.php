@@ -166,7 +166,7 @@ function article_del(obj,tid,aname){
 					$(obj).parents("tr").remove();
 					layer.msg('已删除!',{icon:1,time:1000});
 				}else{
-					layer.msg(data,{icon:1,time:3000});
+					layer.msg(data,{icon:1,time:1000});
 				}
 			}
 		});		
