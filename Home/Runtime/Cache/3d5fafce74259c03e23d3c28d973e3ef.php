@@ -34,8 +34,8 @@
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right mainNav">
 					<li><a href="__APP__/Index/index">首页</a></li>
-					<li ><a href="#">风景</a></li>
-					<li class="active"><a href="__APP__/Hotel/index">住宿</a></li>
+					<li><a href="__APP__/Tour/index">风景</a></li>
+					<li><a href="__APP__/Hotel/index">住宿</a></li>
 					<li><a href="__APP__/Line/index">线路</a></li>
 					<li><a href="__APP__/Localpro/cases">美食</a></li>
 					<li><a href="__APP__/Info/index">资讯</a></li>
@@ -55,7 +55,6 @@
 		</div>
 	</div>
 	<!-- /.navbar -->
-
 	<header id="head" class="secondary">
 		<div class="container">
 			<div class="row">
@@ -224,41 +223,32 @@
 
 	</section>
 	<!-- /container -->
-
-	<footer id="footer"> 
+	 <footer id="footer">
 		<div class="footer2">
 			<div class="container">
 				<div class="row">
-
 					<div class="col-md-6 panel">
 						<div class="panel-body">
-							<p class="simplenav">
-								<a href="__APP__/Index/index">首页</a> | 
-								<a href="__APP__/Tour/index">景点</a> |
-								<a href="__APP__/Hotel/index">住宿</a> |
-								<a href="__APP__/Line/index">线路</a> |
-								<a href="__APP__/Localpro/cases">特产</a> |
-								<a href="__APP__/Info/index">资讯</a>
-							</p>
+							<a href="__APP__/Index/index">首页</a> | 
+							<a href="__APP__/Tour/index">景点</a> |
+							<a href="__APP__/Hotel/index">住宿</a> |
+							<a href="__APP__/Line/index">线路</a> |
+							<a href="__APP__/Localpro/cases">特产</a> |
+							<a href="__APP__/Info/index">资讯</a>
 						</div>
 					</div>
-
 					<div class="col-md-6 panel">
 						<div class="panel-body">
 							<p class="text-right">
-								Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a>
+								Copyright &copy;2017 the tourinfo management system devoloped on my own,zjj.
 							</p>
 						</div>
 					</div>
-
 				</div>
 				<!-- /row of panels -->
 			</div>
 		</div>
 	</footer>
-
-
-
 	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
 	<script src="__PUBLIC__/assets/js/jquery.min.js"></script>
 	<script src="__PUBLIC__/assets/js/bootstrap.min.js"></script>

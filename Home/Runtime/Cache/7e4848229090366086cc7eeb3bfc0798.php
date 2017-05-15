@@ -30,10 +30,10 @@
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right mainNav">
-					<li class="active"><a href="#">首页</a></li>
+					<li><a href="__APP__/Index/index">首页</a></li>
 					<li><a href="__APP__/Tour/index">风景</a></li>
-					<li><a href="__App__/Hotel/index">住宿</a></li>
-					<li><a href="price.html">线路</a></li>
+					<li><a href="__APP__/Hotel/index">住宿</a></li>
+					<li><a href="__APP__/Line/index">线路</a></li>
 					<li><a href="__APP__/Localpro/cases">美食</a></li>
 					<li><a href="__APP__/Info/index">资讯</a></li>
 					<li class="dropdown">
@@ -52,7 +52,6 @@
 		</div>
 	</div>
 	<!-- /.navbar -->
-
 	<!-- Header -->
 	<header id="head">
 		<div class="container">
@@ -409,14 +408,10 @@
          
       </div></div>
       </section>
-      
-    	 
-    <footer id="footer">
-	 
+       <footer id="footer">
 		<div class="footer2">
 			<div class="container">
 				<div class="row">
-
 					<div class="col-md-6 panel">
 						<div class="panel-body">
 							<a href="__APP__/Index/index">首页</a> | 
@@ -427,7 +422,6 @@
 							<a href="__APP__/Info/index">资讯</a>
 						</div>
 					</div>
-
 					<div class="col-md-6 panel">
 						<div class="panel-body">
 							<p class="text-right">
@@ -435,13 +429,11 @@
 							</p>
 						</div>
 					</div>
-
 				</div>
 				<!-- /row of panels -->
 			</div>
 		</div>
 	</footer>
-
 	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
 	<!--<script src="__PUBLIC__/assets/js/modernizr-latest.js"></script> -->
 	<script type='text/javascript' src='__PUBLIC__/assets/js/jquery.min.js'></script>
