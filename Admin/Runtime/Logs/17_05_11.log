@@ -1,0 +1,57 @@
+[ 2017-05-11T11:05:29+08:00 ] ERR: (ThinkException) 非法操作:fileupload
+[ 2017-05-11T11:43:02+08:00 ] 0.0.0.0 /TourSystem/admin.php/Tour/do_addtour
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000519s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000572s ]
+
+[ 2017-05-11T11:43:33+08:00 ] 0.0.0.0 /TourSystem/admin.php/Tour/do_addtour
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000918s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001019s ]
+
+[ 2017-05-11T11:43:40+08:00 ] 0.0.0.0 /TourSystem/admin.php/Tour/do_addtour
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001103s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001151s ]
+
+[ 2017-05-11T11:44:31+08:00 ] 0.0.0.0 /TourSystem/admin.php/Tour/do_addtour
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.002331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002472s ]
+
+[ 2017-05-11T14:34:22+08:00 ] 0.0.0.0 /TourSystem/admin.php/Tour/do_addtour
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000539s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000581s ]
+
+[ 2017-05-11T14:35:38+08:00 ] 0.0.0.0 /TourSystem/admin.php/Tour/do_addtour
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001893s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001991s ]
+
+[ 2017-05-11T14:45:49+08:00 ] 0.0.0.0 /TourSystem/admin.php/Tour/do_addtour
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000736s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000776s ]
+
+[ 2017-05-11T14:59:00+08:00 ] 0.0.0.0 /TourSystem/admin.php/Tour/do_addtour
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000801s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000857s ]
+
+[ 2017-05-11T15:48:35+08:00 ] ERR: (ThinkException) 非法操作:system-base
+[ 2017-05-11T15:48:36+08:00 ] ERR: (ThinkException) 非法操作:system-data
+[ 2017-05-11T15:48:37+08:00 ] ERR: (ThinkException) 非法操作:system-log
+[ 2017-05-11T15:48:38+08:00 ] ERR: (ThinkException) 非法操作:system-shielding
+[ 2017-05-11T15:48:39+08:00 ] ERR: (ThinkException) 非法操作:system-data
+[ 2017-05-11T15:48:41+08:00 ] ERR: (ThinkException) 非法操作:charts-1
+[ 2017-05-11T15:48:41+08:00 ] ERR: (ThinkException) 非法操作:charts-2
+[ 2017-05-11T15:48:42+08:00 ] ERR: (ThinkException) 非法操作:charts-4
+[ 2017-05-11T15:48:42+08:00 ] ERR: (ThinkException) 非法操作:charts-6
+[ 2017-05-11T15:48:44+08:00 ] ERR: (ThinkException) 非法操作:member-list
+[ 2017-05-11T15:48:44+08:00 ] ERR: (ThinkException) 非法操作:member-level
+[ 2017-05-11T15:48:44+08:00 ] ERR: (ThinkException) 非法操作:member-record-browse
+[ 2017-05-11T15:48:46+08:00 ] ERR: (ThinkException) 非法操作:feedback-list
+[ 2017-05-11T15:48:47+08:00 ] ERR: (ThinkException) 非法操作:product-brand
+[ 2017-05-11T15:48:48+08:00 ] ERR: (ThinkException) 非法操作:product-category
+[ 2017-05-11T19:49:46+08:00 ] ERR: (ThinkException) 模板不存在[./Admin/Tpl/Tour/do_addtour.html]

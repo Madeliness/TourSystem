@@ -1,0 +1,45 @@
+[ 2017-05-15T10:22:35+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T10:22:35+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T10:22:35+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T10:22:35+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T10:22:35+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T10:22:35+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T10:22:35+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T10:22:35+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T10:22:35+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T19:22:20+08:00 ] 0.0.0.0 /TourSystem/admin.php/Tour/do_uptour
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.002295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002415s ]
+SQL: SHOW COLUMNS FROM `tp_tourist` [ RunTime:0.003037s ]
+SQL: UPDATE `tp_tourist` SET `tname`='wdf1123213123213',`tcity`='西安',`tlevel`='AAA',`ttype`='ewf',`taddress`='wefe',`tabstract`='12312321312',`ticket`='21',`tinfo`='<p>123123123123</p>',`tbimg`='',`tline`='21',`aname`='zhang',`tctime`='2017-05-15 00:00:00' WHERE ( `tid` = 47 ) [ RunTime:0.000405s ]
+
+[ 2017-05-15T19:36:04+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T19:36:04+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T19:36:04+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T19:36:04+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T19:36:04+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T19:36:04+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T19:36:04+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T19:36:04+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T19:36:04+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T20:07:04+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T20:07:04+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T20:07:04+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T20:07:04+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T20:07:04+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T20:07:04+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T20:07:04+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T20:07:04+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T20:07:04+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T20:07:11+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T20:07:11+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T20:07:11+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T20:07:11+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T20:07:11+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T20:07:11+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T20:07:11+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T20:07:11+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T20:07:11+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T20:08:25+08:00 ] ERR: (ThinkException) 非法操作:temp
+[ 2017-05-15T20:08:25+08:00 ] ERR: (ThinkException) 非法操作:static

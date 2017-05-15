@@ -1,0 +1,265 @@
+[ 2017-04-15T19:24:39+08:00 ] ERR: (ThinkException) 非法操作:__Admin__
+[ 2017-04-15T19:25:43+08:00 ] ERR: (ThinkException) 非法操作:__Admin__
+[ 2017-04-15T19:30:59+08:00 ] ERR: (ThinkException) 非法操作:R("Admin
+[ 2017-04-15T19:38:59+08:00 ] ERR: (ThinkException) 非法操作:U('Admin
+[ 2017-04-15T19:45:17+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=xxxx
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000805s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000854s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.009155s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = 'xxxx' ) LIMIT 1   [ RunTime:0.000701s ]
+
+[ 2017-04-15T19:46:09+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=xxxx
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000822s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000873s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.009065s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = 'xxxx' ) LIMIT 1   [ RunTime:0.000452s ]
+
+[ 2017-04-15T19:46:12+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=xxxx
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000803s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000852s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.007988s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = 'xxxx' ) LIMIT 1   [ RunTime:0.000464s ]
+
+[ 2017-04-15T19:49:38+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=vvvv
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000662s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000708s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.009789s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = 'vvvv' ) LIMIT 1   [ RunTime:0.000707s ]
+
+[ 2017-04-15T19:55:34+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=lili
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000801s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000864s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.007204s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = 'lili' ) LIMIT 1   [ RunTime:0.000554s ]
+
+[ 2017-04-15T19:55:36+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=lili
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000722s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000772s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.007369s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = 'lili' ) LIMIT 1   [ RunTime:0.000569s ]
+
+[ 2017-04-15T19:56:33+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=aaaa
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001783s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001890s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.007902s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = 'aaaa' ) LIMIT 1   [ RunTime:0.000566s ]
+
+[ 2017-04-15T19:57:13+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=zaza
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000960s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001019s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.007960s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = 'zaza' ) LIMIT 1   [ RunTime:0.000573s ]
+
+[ 2017-04-15T19:59:45+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=aaaa
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000861s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000918s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.007757s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = 'aaaa' ) LIMIT 1   [ RunTime:0.000461s ]
+
+[ 2017-04-15T20:00:11+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=zzzz
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000990s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001058s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.007101s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = 'zzzz' ) LIMIT 1   [ RunTime:0.000532s ]
+
+[ 2017-04-15T20:01:39+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=aaaa
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000671s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000714s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.007344s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = 'aaaa' ) LIMIT 1   [ RunTime:0.000556s ]
+
+[ 2017-04-15T20:02:17+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=zzzz
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001058s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001123s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.007237s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = 'zzzz' ) LIMIT 1   [ RunTime:0.000543s ]
+
+[ 2017-04-15T20:03:33+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=xxxx
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000934s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000991s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.008340s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = 'xxxx' ) LIMIT 1   [ RunTime:0.000551s ]
+
+[ 2017-04-15T20:08:26+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=zzzz
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001386s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.007169s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = 'zzzz' ) LIMIT 1   [ RunTime:0.000549s ]
+
+[ 2017-04-15T20:10:00+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=xxxx
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000829s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000872s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.007138s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = 'xxxx' ) LIMIT 1   [ RunTime:0.000501s ]
+
+[ 2017-04-15T20:11:14+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=zzzz
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001373s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.004441s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = 'zzzz' ) LIMIT 1   [ RunTime:0.000385s ]
+
+[ 2017-04-15T20:14:24+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=zzzz
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000972s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001025s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.007190s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = 'zzzz' ) LIMIT 1   [ RunTime:0.000555s ]
+
+[ 2017-04-15T20:17:37+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=qqqq
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000867s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000912s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.007973s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = 'qqqq' ) LIMIT 1   [ RunTime:0.000563s ]
+
+[ 2017-04-15T22:10:43+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=zzzz
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001362s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.013934s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = 'zzzz' ) LIMIT 1   [ RunTime:0.000629s ]
+
+[ 2017-04-15T22:45:37+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=qqqq
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001411s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001505s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.003673s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = 'qqqq' ) LIMIT 1   [ RunTime:0.000303s ]
+
+[ 2017-04-15T22:45:45+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=zaza
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000909s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000962s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.007720s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = 'zaza' ) LIMIT 1   [ RunTime:0.000539s ]
+
+[ 2017-04-15T23:03:20+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=zaza
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001382s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001479s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.003721s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = 'zaza' ) LIMIT 1   [ RunTime:0.000240s ]
+
+[ 2017-04-15T23:06:31+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=1111
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001402s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.004246s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = '1111' ) LIMIT 1   [ RunTime:0.000345s ]
+
+[ 2017-04-15T23:07:05+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=1111
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000845s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000891s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.007068s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = '1111' ) LIMIT 1   [ RunTime:0.000534s ]
+
+[ 2017-04-15T23:09:33+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=1111
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000850s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000899s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.007525s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = '1111' ) LIMIT 1   [ RunTime:0.000616s ]
+
+[ 2017-04-15T23:10:28+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=1111
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000804s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000852s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.007076s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = '1111' ) LIMIT 1   [ RunTime:0.000507s ]
+
+[ 2017-04-15T23:13:29+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=1111
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000936s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000993s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.007525s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = '1111' ) LIMIT 1   [ RunTime:0.000553s ]
+
+[ 2017-04-15T23:16:32+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=1111
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000790s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000837s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.007340s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = '1111' ) LIMIT 1   [ RunTime:0.000555s ]
+
+[ 2017-04-15T23:16:33+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=1111
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000753s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000795s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.007219s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = '1111' ) LIMIT 1   [ RunTime:0.000533s ]
+
+[ 2017-04-15T23:18:44+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=1111
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000630s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000698s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.004532s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = '1111' ) LIMIT 1   [ RunTime:0.000292s ]
+
+[ 2017-04-15T23:19:59+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=zhang
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001089s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.006246s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = 'zhang' ) LIMIT 1   [ RunTime:0.000461s ]
+
+[ 2017-04-15T23:22:23+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=111111
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000772s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000823s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.004465s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = '111111' ) LIMIT 1   [ RunTime:0.000287s ]
+
+[ 2017-04-15T23:22:40+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=1111
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001279s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001363s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.007635s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = '1111' ) LIMIT 1   [ RunTime:0.000539s ]
+
+[ 2017-04-15T23:22:51+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=1111
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000687s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000731s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.007358s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = '1111' ) LIMIT 1   [ RunTime:0.000548s ]
+
+[ 2017-04-15T23:24:06+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=1111
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001007s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001092s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.007731s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = '1111' ) LIMIT 1   [ RunTime:0.000547s ]
+
+[ 2017-04-15T23:24:59+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=lili
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000696s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000799s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.006262s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = 'lili' ) LIMIT 1   [ RunTime:0.000486s ]
+
+[ 2017-04-15T23:25:45+08:00 ] ERR: (ThinkException) 非法操作:article-list
+[ 2017-04-15T23:28:12+08:00 ] 0.0.0.0 /TourSystem/admin.php/Login/Checkname?aaname=lili
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000954s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001026s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.003109s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_admin` WHERE ( `aname` = 'lili' ) LIMIT 1   [ RunTime:0.000244s ]
+
+[ 2017-04-15T23:40:09+08:00 ] ERR: (ThinkException) 非法操作:article-list
