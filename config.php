@@ -8,7 +8,7 @@ return array(
 	'DB_HOST'=>'localhost',
 	'DB_NAME'=>'toursystem',
 	'DB_USER'=>'root',
-	'DB_PWD'=>'root',
+	'DB_PWD'=>'123456',
 	'DB_PORT'=>'3306',
 	'DB_PREFIX'=>'tp_',
 	//'DB_DNS'=>'mysql://root:root@localhost:3306/test02',
