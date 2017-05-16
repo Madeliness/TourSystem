@@ -52,6 +52,7 @@
 		</div>
 	</div>
 	<!-- /.navbar -->
+	<form action="__URL__/tour" method="post"><input value="" name="tid"/><input type="submit"value="dian" /></form>
 	<!-- Header -->
 	<header id="head">
 		<div class="container">
@@ -78,9 +79,9 @@
 		</section>
 	 <section id="packages" class="secpadding">
         <div class="container">
-             <h3><span>热门景点推荐</span></h3>
+             <h3><span>热门景点推荐<?php echo ($count); ?></span></h3>
             <div class="row">
-                <div class="col-md-3 col-sm-6">
+			<?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="col-md-3 col-sm-6" data-tid="<?php echo ($vo["tid"]); ?>">
                             <div class="cuadro_intro_hover " style="background-color:#cccccc;">
                                 <p style="text-align:center;">
                                     <img src="__PUBLIC__/assets/images/pic/pic-1.jpg" class="img-responsive" alt="">
@@ -88,121 +89,14 @@
                                 <div class="caption">
                                     <div class="blur"></div>
                                     <div class="caption-text">
-                                        <h3>Project Name</h3> 
-                                        <a class=" btn btn-default" href="#">$4600</i></a>
+                                        <h3><?php echo ($vo["tname"]); ?>·<?php echo ($vo["tcity"]); ?></h3> 
+                                        <a class=" btn btn-default" href="#">￥<?php echo ($vo["ticket"]); ?></i></a>
                                     </div>
                                 </div>
                             </div>
                         
-                </div>
-                <div class="col-md-3 col-sm-6">
-                            <div class="cuadro_intro_hover " style="background-color:#cccccc;">
-                                <p style="text-align:center;">
-                                    <img src="__PUBLIC__/assets/images/pic/pic-2.jpg" class="img-responsive" alt="">
-                                </p>
-                                <div class="caption">
-                                    <div class="blur"></div>
-                                    <div class="caption-text">
-                                         <h3>Project Name</h3> 
-                                        <a class=" btn btn-default" href="#"> $4600</i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        
-                </div>
-                <div class="col-md-3 col-sm-6">
-                            <div class="cuadro_intro_hover " style="background-color:#cccccc;">
-                                <p style="text-align:center;">
-                                    <img src="__PUBLIC__/assets/images/pic/pic-3.jpg" class="img-responsive" alt="">
-                                </p>
-                                <div class="caption">
-                                    <div class="blur"></div>
-                                    <div class="caption-text">
-                                        <h3>Project Name</h3> 
-                                        <a class=" btn btn-default" href="#">$4600</i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        
-                </div>
-                <div class="col-md-3 col-sm-6">
-                            <div class="cuadro_intro_hover " style="background-color:#cccccc;">
-                                <p style="text-align:center;">
-                                    <img src="__PUBLIC__/assets/images/pic/pic-4.jpg" class="img-responsive" alt="">
-                                </p>
-                                <div class="caption">
-                                    <div class="blur"></div>
-                                    <div class="caption-text">
-                                         <h3>Project Name</h3> 
-                                        <a class=" btn btn-default" href="#">$4600</i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        
-                </div>
-            </div>    
-        	 <div class="row">
-                <div class="col-md-3 col-sm-6">
-                            <div class="cuadro_intro_hover " style="background-color:#cccccc;">
-                                <p style="text-align:center;">
-                                    <img src="__PUBLIC__/assets/images/pic/pic-5.jpg" class="img-responsive" alt="">
-                                </p>
-                                <div class="caption">
-                                    <div class="blur"></div>
-                                    <div class="caption-text">
-                                        <h3>Project Name</h3> 
-                                        <a class=" btn btn-default" href="#">$4600</i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        
-                </div>
-                <div class="col-md-3  col-sm-6">
-                            <div class="cuadro_intro_hover " style="background-color:#cccccc;">
-                                <p style="text-align:center;">
-                                    <img src="__PUBLIC__/assets/images/pic/pic-6.jpg" class="img-responsive" alt="">
-                                </p>
-                                <div class="caption">
-                                    <div class="blur"></div>
-                                    <div class="caption-text">
-                                         <h3>Project Name</h3> 
-                                        <a class=" btn btn-default" href="#">$4600</i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        
-                </div>
-                <div class="col-md-3  col-sm-6">
-                            <div class="cuadro_intro_hover " style="background-color:#cccccc;">
-                                <p style="text-align:center;">
-                                    <img src="__PUBLIC__/assets/images/pic/pic-7.jpg" class="img-responsive" alt="">
-                                </p>
-                                <div class="caption">
-                                    <div class="blur"></div>
-                                    <div class="caption-text">
-                                         <h3>Project Name</h3> 
-                                        <a class=" btn btn-default" href="#">$4600</i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        
-                </div>
-                <div class="col-md-3  col-sm-6">
-                            <div class="cuadro_intro_hover " style="background-color:#cccccc;">
-                                <p style="text-align:center;">
-                                    <img src="__PUBLIC__/assets/images/pic/pic-8.jpg" class="img-responsive" alt="">
-                                </p>
-                                <div class="caption">
-                                    <div class="blur"></div>
-                                    <div class="caption-text">
-                                         <h3>Project Name</h3> 
-                                        <a class=" btn btn-default" href="#">$4600</i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        
-                </div>
-            </div>    
+                </div><?php endforeach; endif; else: echo "" ;endif; ?>
+            </div>       
          </div>
     </section>
       <section class="news-box secpadding">
