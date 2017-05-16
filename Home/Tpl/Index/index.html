@@ -48,21 +48,20 @@
         <div class="container">
              <h3><span>热门景点推荐<{$count}></span></h3>
             <div class="row">
-			<volist name="data" id="vo">
+			<volist name="tour" id="vo">
                 <div class="col-md-3 col-sm-6" data-tid="<{$vo.tid}>">
-                            <div class="cuadro_intro_hover " style="background-color:#cccccc;">
-                                <p style="text-align:center;">
-                                    <img src="__PUBLIC__/assets/images/pic/pic-1.jpg" class="img-responsive" alt="">
-                                </p>
-                                <div class="caption">
-                                    <div class="blur"></div>
-                                    <div class="caption-text">
-                                        <h3><{$vo.tname}>·<{$vo.tcity}></h3> 
-                                        <a class=" btn btn-default" href="#">￥<{$vo.ticket}></i></a>
-                                    </div>
-                                </div>
+                    <div class="cuadro_intro_hover " style="background-color:#cccccc;">
+                        <p style="text-align:center;">
+                            <img src="__PUBLIC__/assets/images/pic/pic-1.jpg" class="img-responsive" alt="">
+                        </p>
+                        <div class="caption">
+                            <div class="blur"></div>
+                            <div class="caption-text">
+                                <h3><{$vo.tname}>·<{$vo.tcity}></h3> 
+                                <a class=" btn btn-default" href="#">￥<{$vo.ticket}></i></a>
                             </div>
-                        
+                        </div>
+                    </div>
                 </div>
 			</volist>
             </div>       
@@ -72,78 +71,26 @@
         <div class="container">
             <h3><span>星级酒店推荐</span></h3>
             <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+            <volist name="hotel" id="vo1">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6" data-hid="<{$vo1.hid}>">
                     <div class="newsBox">
                         <div class="thumbnail">
                             <figure><img src="__PUBLIC__/assets/images/news1.jpg" alt=""></figure>
                             <div class="caption maxheight2">
                                 <div class="box_inner">
                                         <div class="box">
-                                            <p class="title"><strong>Lorem ipsum</strong></p>
-                                            <p>Lorem ipsum dolor sit amet, conc tetu er adipi scing. </p>
+                                            <p class="title"><strong><{$vo1.hname}>.<{$vo1.hcity}></strong></p>
+                                            <p><{$vo1.hphone}> </p>
                                         </div>
                                         <div>
-                                            <a href="#" class="btn-inline">more</a>
+                                            <a href="#" class="btn-inline"><{$vo1.hlevel}></a>
                                         </div>
                                 </div>
                             </div> 
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                    <div class="newsBox">
-                        <div class="thumbnail">
-                            <figure><img src="__PUBLIC__/assets/images/news2.jpg" alt=""></figure>
-                            <div class="caption maxheight2">
-                            <div class="box_inner">
-                                        <div class="box">
-                                            <p class="title"><strong>Lorem ipsum</strong></p>
-                                            <p>Lorem ipsum dolor sit amet, conc tetu er adipi scing. </p>
-                                        </div>
-                                        <div>
-                                            <a href="#" class="btn-inline">more</a>
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                    <div class="newsBox">
-                        <div class="thumbnail">
-                            <figure><img src="__PUBLIC__/assets/images/news3.jpg" alt=""></figure>
-                            <div class="caption maxheight2">
-                            <div class="box_inner">
-                                        <div class="box">
-                                            <p class="title"><strong>Lorem ipsum</strong></p>
-                                            <p>Lorem ipsum dolor sit amet, conc tetu er adipi scing. </p>
-                                        </div>
-                                        <div>
-                                            <a href="#" class="btn-inline">more</a>
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                    <div class="newsBox">
-                        <div class="thumbnail">
-                            <figure><img src="__PUBLIC__/assets/images/news4.jpg" alt=""></figure>
-                            <div class="caption maxheight2">
-                           <div class="box_inner">
-                                        <div class="box">
-                                            <p class="title"><strong>Lorem ipsum</strong></p>
-                                            <p>Lorem ipsum dolor sit amet, conc tetu er adipi scing. </p>
-                                        </div>
-                                        <div>
-                                            <a href="#" class="btn-inline">more</a>
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            </volist>
             </div>
         </div>
     </section>
