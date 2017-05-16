@@ -27,12 +27,11 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-8">
-					<h1>Our Projects</h1>
+					<h1>风景列表</h1>
 				</div>
 			</div>
 		</div>
 	</header>
-
 	<!-- container -->
 	<section class="container">
 		<div class="row">
@@ -50,133 +49,38 @@
 					<div class="row">
 						<nav id="filter" class="col-md-12 text-center">
 							<ul>
-								<li><a href="#" class="current btn-theme btn-small" data-filter="*">All</a></li>
-								<li><a href="#" class="btn-theme btn-small" data-filter=".webdesign">Villas</a></li>
-								<li><a href="#" class="btn-theme btn-small" data-filter=".photography">Shopping Mall</a></li>
-								<li><a href="#" class="btn-theme btn-small" data-filter=".print">Township</a></li>
+								<li class="select">选择城市：</li>
+								<li><a href="#" class="current btn-theme btn-small">全部</a></li>
+								<li><a href="#" class="btn-theme btn-small">西安</a></li>
+								<li><a href="#" class="btn-theme btn-small">宝鸡</a></li>
+								<li><a href="#" class="btn-theme btn-small">铜川</a></li>
+								<li><a href="#" class="btn-theme btn-small">咸阳</a></li>
+								<li><a href="#" class="btn-theme btn-small">渭南</a></li>
+								<li><a href="#" class="btn-theme btn-small">延安</a></li>
+								<li><a href="#" class="btn-theme btn-small">汉中</a></li>
+								<li><a href="#" class="btn-theme btn-small">榆林</a></li>
+								<li><a href="#" class="btn-theme btn-small">安康</a></li>
+								<li><a href="#" class="btn-theme btn-small">商洛</a></li>
 							</ul>
 						</nav>
 						<div class="col-md-12">
 							<div class="row">
-								<div class="portfolio-items isotopeWrapper clearfix" id="3">
-
-									<article class="col-sm-4 isotopeItem webdesign">
+								<div class="portfolio-items isotopeWrapper clearfix" >
+									<volist name="list" id="v">
+									<article class="col-sm-4 isotopeItem webdesign" data-tid="<{$v.tid}>">
 										<div class="portfolio-item">
 											<img src="__PUBLIC__/assets/images/portfolio/img1.jpg" alt="" />
 											<div class="portfolio-desc align-center">
 												<div class="folio-info">
 													<a href="__PUBLIC__/assets/images/portfolio/img1.jpg" class="fancybox">
-														<h5>Project Title</h5>
+														<h5><{$v.tname}>·<{$v.tcity}></h5>
+														<p><{$v.tabstract}></p>
 														<i class="fa fa-link fa-2x"></i></a>
 												</div>
 											</div>
 										</div>
 									</article>
-
-									<article class="col-sm-4 isotopeItem photography">
-										<div class="portfolio-item">
-											<img src="__PUBLIC__/assets/images/portfolio/img2.jpg" alt="" />
-											<div class="portfolio-desc align-center">
-												<div class="folio-info">
-													<a href="__PUBLIC__/assets/images/portfolio/img2.jpg" class="fancybox">
-														<h5>Project Title</h5>
-														<i class="fa fa-link fa-2x"></i></a>
-												</div>
-											</div>
-										</div>
-									</article>
-
-
-									<article class="col-sm-4 isotopeItem photography">
-										<div class="portfolio-item">
-											<img src="__PUBLIC__/assets/images/portfolio/img3.jpg" alt="" />
-											<div class="portfolio-desc align-center">
-												<div class="folio-info">
-													<a href="__PUBLIC__/assets/images/portfolio/img3.jpg" class="fancybox">
-														<h5>Project Title</h5>
-														<i class="fa fa-link fa-2x"></i></a>
-												</div>
-											</div>
-										</div>
-									</article>
-
-									<article class="col-sm-4 isotopeItem print">
-										<div class="portfolio-item">
-											<img src="__PUBLIC__/assets/images/portfolio/img4.jpg" alt="" />
-											<div class="portfolio-desc align-center">
-												<div class="folio-info">
-													<a href="__PUBLIC__/assets/images/portfolio/img4.jpg" class="fancybox">
-														<h5>Project Title</h5>
-														<i class="fa fa-link fa-2x"></i></a>
-												</div>
-											</div>
-										</div>
-									</article>
-
-									<article class="col-sm-4 isotopeItem photography">
-										<div class="portfolio-item">
-											<img src="__PUBLIC__/assets/images/portfolio/img5.jpg" alt="" />
-											<div class="portfolio-desc align-center">
-												<div class="folio-info">
-													<a href="__PUBLIC__/assets/images/portfolio/img5.jpg" class="fancybox">
-														<h5>Project Title</h5>
-														<i class="fa fa-link fa-2x"></i></a>
-												</div>
-											</div>
-										</div>
-									</article>
-
-									<article class="col-sm-4 isotopeItem webdesign">
-										<div class="portfolio-item">
-											<img src="__PUBLIC__/assets/images/portfolio/img6.jpg" alt="" />
-											<div class="portfolio-desc align-center">
-												<div class="folio-info">
-													<a href="__PUBLIC__/assets/images/portfolio/img6.jpg" class="fancybox">
-														<h5>Project Title</h5>
-														<i class="fa fa-link fa-2x"></i></a>
-												</div>
-											</div>
-										</div>
-									</article>
-
-									<article class="col-sm-4 isotopeItem print">
-										<div class="portfolio-item">
-											<img src="__PUBLIC__/assets/images/portfolio/img7.jpg" alt="" />
-											<div class="portfolio-desc align-center">
-												<div class="folio-info">
-													<a href="__PUBLIC__/images/portfolio/img7.jpg" class="fancybox">
-														<h5>Project Title</h5>
-														<i class="fa fa-link fa-2x"></i></a>
-												</div>
-											</div>
-										</div>
-									</article>
-
-									<article class="col-sm-4 isotopeItem photography">
-										<div class="portfolio-item">
-											<img src="__PUBLIC__/assets/images/portfolio/img8.jpg" alt="" />
-											<div class="portfolio-desc align-center">
-												<div class="folio-info">
-													<a href="__PUBLIC__/images/portfolio/img8.jpg" class="fancybox">
-														<h5>Project Title</h5>
-														<i class="fa fa-link fa-2x"></i></a>
-												</div>
-											</div>
-										</div>
-									</article>
-
-									<article class="col-sm-4 isotopeItem print">
-										<div class="portfolio-item">
-											<img src="__PUBLIC__/assets/images/portfolio/img9.jpg" alt="" />
-											<div class="portfolio-desc align-center">
-												<div class="folio-info">
-													<a href="__PUBLIC__/images/portfolio/img9.jpg" class="fancybox">
-														<h5>Project Title</h5>
-														<i class="fa fa-link fa-2x"></i></a>
-												</div>
-											</div>
-										</div>
-									</article>
+									</volist>
 								</div>
 
 							</div>
@@ -188,8 +92,9 @@
 				</section>
 			</div>
 		</div>
-
+		
 	</section>
+	<p style="text-align:center;"><{$page}></p>
 	<!-- /container -->
 	 <include file="Public:footer" />
 	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
