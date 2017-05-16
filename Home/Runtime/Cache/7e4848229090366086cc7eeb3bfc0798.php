@@ -52,7 +52,6 @@
 		</div>
 	</div>
 	<!-- /.navbar -->
-	<form action="__URL__/tour" method="post"><input value="" name="tid"/><input type="submit"value="dian" /></form>
 	<!-- Header -->
 	<header id="head">
 		<div class="container">

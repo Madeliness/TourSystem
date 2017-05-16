@@ -6,7 +6,7 @@ class IndexAction extends Action {
 		$t=M('Tourist');  //$m模型的实例
 		$tidmax=$t->max('tid');
 		$where['tid']=array('elt',$tidmax);
-		$arr = $t->where($where)->limit(8)->order('tctime desc')->getField('tid,tname,tcity,ticket');
+		$arr = $t->where($where)->limit(8)->order('tid desc')->getField('tid,tname,tcity,ticket');
 		//var_dump($arr);
 		$this->assign('data',$arr);
 		
