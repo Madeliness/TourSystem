@@ -1,4 +1,3 @@
-<!--_meta 作为公共模版分离出去-->
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -7,8 +6,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
-<link rel="Bookmark" href="__PUBLIC__/favicon.ico" >
-<link rel="Shortcut Icon" href="__PUBLIC__/favicon.ico" />
 <!--[if lt IE 9]>
 <script type="text/javascript" src="__PUBLIC__/lib/html5shiv.js"></script>
 <script type="text/javascript" src="__PUBLIC__/lib/respond.min.js"></script>
@@ -17,32 +14,32 @@
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/static/h-ui.admin/css/H-ui.admin.css" />
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/lib/Hui-iconfont/1.0.8/iconfont.css" />
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/static/h-ui.admin/skin/default/skin.css" id="skin" />
-<link rel="stylesheet" type="text/css" href="__PUBLIC__/CSS/webuploader.css" />
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/static/h-ui.admin/css/style.css" />
+
 <!--[if IE 6]>
 <script type="text/javascript" src="__PUBLIC__/lib/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
 <![endif]-->
-<!--/meta 作为公共模版分离出去-->
 
-<title>景点管理->发布景点</title>
-<meta name="keywords" content="H-ui.admin v3.0,H-ui网站后台模版,后台模版下载,后台管理系统模版,HTML后台模版下载">
+<title>特产信息更新</title>
+<link href="__PUBLIC__/lib/webuploader/0.1.5/webuploader.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<article class="page-container">
-	<form class="form form-horizontal" id="form-article-add" name="form-article-add" method="post" action="__URL__/do_uptour">
-		<input type="hidden" value="<{$data.tid}>" name="tid" id="tid">
+<div class="page-container">
+	<form class="form form-horizontal" id="form-article-add" method="post" action="__URL__/do_update">
+	<input type="hidden" value="<{$data.idtype}>" name="idtype">
+	<input type="hidden" value="<{$data.id}>" name="id" id="id">
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>景点名称：</label>
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>名称：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="<{$data.tname}>" placeholder="大唐芙蓉园" id="tourname" name="tourname">
+				<input type="text" class="input-text" value="<{$data.name}>" placeholder="哨子面" id="name" name="name">
 			</div>
 		</div>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>选择地区：</label>
 			<div class="formControls col-xs-8 col-sm-9"> 
 				<span class="select-box">
-					<select name="tourcolumn" class="select" value="<{$data.tcity}>">
+					<select name="column" class="select"  value="<{$data.city}>">
 						<option value="西安">西安</option>
 						<option value="宝鸡">宝鸡</option>
 						<option value="铜川">铜川</option>
@@ -58,56 +55,21 @@
 			</div>
 		</div>
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">景点等级：</label>
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>特产简介：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="<{$data.tlevel}>" placeholder="AAAA" id="tourlevel" name="tourlevel">
-			</div>
-		</div>
-		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>景点类型：</label>
-			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="<{$data.ttype}>" placeholder="园林,公园,亭台楼阁,游乐场,森林,山脉,红色旅游,陵墓,古镇" id="tourtype" name="tourtype">
-			</div>
-		</div>
-		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>景点地址：</label>
-			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="<{$data.taddress}>" placeholder="陕西省西安市芙蓉西路99号" id="tourad" name="tourad">
-			</div>
-		</div>
-		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>景点简介：</label>
-			<div class="formControls col-xs-8 col-sm-9">
-				<textarea name="abstracts" cols="" rows="" class="textarea"  placeholder="" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="$.Huitextarealength(this,200)"><{$data.tabstract}></textarea>
+				<textarea name="info" cols="" rows="" class="textarea"  placeholder="一句话介绍...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="$.Huitextarealength(this,200)"><{$data.info}></textarea>
 				<p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
 			</div>
 		</div>
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">门票信息：</label>
+			<label class="form-label col-xs-4 col-sm-2">特产图片：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="<{$data.ticket}>" placeholder="通票150元" id="ticket" name="ticket">
-			</div>
-		</div>
-		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">景点详细介绍：</label>
-			<div class="formControls col-xs-8 col-sm-9"> 
-				<script id="editor" type="text/plain" style="width:100%;height:400px;"></script> 
-			</div>
-		</div>
-		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">景点图片：</label>
-			<div class="formControls col-xs-8 col-sm-9">
+				<input type="hidden"  value="<{$data.bimg}>" name="imgfile"/>
 				<div class="uploader-thum-container">
 					<div id="fileList" class="uploader-list"></div>
 					<div id="filePicker">选择图片</div>
 					<button id="btn-star" class="btn btn-default btn-uploadstar radius ml-10">开始上传</button>
 				</div>
-			</div>
-		</div>
-		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">公交线路：</label>
-			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="<{$data.tline}>" placeholder="40路" id="tourline" name="tourline">
 			</div>
 		</div>
 		<div class="row cl">
@@ -119,7 +81,7 @@
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>发布日期：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" onfocus="WdatePicker({startDate:'%y',dateFmt:'yyyy-MM-dd',maxDate:'%y-%M-%d',minDate:'%y-%M-%d'})" id="commentdatemin" name="commentdatemin" class="input-text Wdate" value="<{$data.tctime}>">
+				<input type="text" onfocus="WdatePicker({startDate:'%y',dateFmt:'yyyy-MM-dd',maxDate:'%y-%M-%d',minDate:'%y-%M-%d'})" id="commentdatemin" name="commentdatemin" class="input-text Wdate" value="<{$data.time}>">
 			</div>
 		</div>
 		<div class="row cl">
@@ -130,34 +92,31 @@
 			</div>
 		</div>
 	</form>
-</article>
-
+</div>
 <!--_footer 作为公共模版分离出去-->
 <script type="text/javascript" src="__PUBLIC__/lib/jquery/1.9.1/jquery.min.js"></script> 
 <script type="text/javascript" src="__PUBLIC__/lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/My97DatePicker/4.8/WdatePicker.js"></script>
 <script type="text/javascript" src="__PUBLIC__/static/h-ui/js/H-ui.min.js"></script> 
-<script type="text/javascript" src="__PUBLIC__/static/h-ui.admin/js/H-ui.admin.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/static/h-ui.admin/js/H-ui.admin.js"></script>
 <!--/_footer /作为公共模版分离出去-->
 
+
+
 <!--请在下方写此页面业务相关的脚本-->
-<script type="text/javascript" src="__PUBLIC__/lib/My97DatePicker/4.8/WdatePicker.js"></script>
 <script type="text/javascript" src="__PUBLIC__/lib/jquery.validation/1.14.0/jquery.validate.js"></script> 
 <script type="text/javascript" src="__PUBLIC__/lib/jquery.validation/1.14.0/validate-methods.js"></script> 
-<script type="text/javascript" src="__PUBLIC__/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/jquery.validation/1.14.0/messages_zh.js"></script> 
 <script type="text/javascript" src="__PUBLIC__/lib/webuploader/0.1.5/webuploader.min.js"></script> 
-<script type="text/javascript" src="__PUBLIC__/lib/ueditor/1.4.3/ueditor.config.js"></script> 
-<script type="text/javascript" src="__PUBLIC__/lib/ueditor/1.4.3/ueditor.all.min.js"> </script> 
-<script type="text/javascript" src="__PUBLIC__/lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
 <script type="text/javascript">
+function article_save(){
+	alert("刷新父级的时候会自动关闭弹层。")
+	window.parent.location.reload();
+}
+
 $(function(){
-	/* $('.skin-minimal input').iCheck({
-		checkboxClass: 'icheckbox-blue',
-		radioClass: 'iradio-blue',
-		increaseArea: '20%'
-	}); */
-	
 	//图片上传
-	$list = $("#fileList"),  
+	$list = $("#fileList"),  //
 	$btn = $("#btn-star"),
 	state = "pending",
 	uploader;
@@ -201,7 +160,6 @@ $(function(){
 				$img.replaceWith('<span>不能预览</span>');
 				return;
 			}
-	
 			$img.attr( 'src', src );
 		}, thumbnailWidth, thumbnailHeight );
 	});
@@ -219,8 +177,11 @@ $(function(){
 	});
 	
 	// 文件上传成功，给item添加成功class, 用样式标记上传成功。
-	uploader.on( 'uploadSuccess', function( file ) {
+	uploader.on( 'uploadSuccess', function(file,json) {
+		var url=json.url;
+		//console.log(url);
 		$( '#'+file.id ).addClass('upload-state-success').find(".state").text("已上传");
+		$('input[name="imgfile"]').val(url);
 	});
 	
 	// 文件上传失败，显示上传出错。
@@ -247,7 +208,7 @@ $(function(){
             $btn.text('开始上传');
         }
     });
-
+	
     $btn.on('click', function () {
         if (state === 'uploading') {
             uploader.stop();
@@ -256,36 +217,19 @@ $(function(){
         }
     });
 	
-	var ue = UE.getEditor('editor');
-	 var content ='<{$data.tinfo}>';
-        //判断ueditor 编辑器是否创建成功
-        ue.addListener("ready", function () {
-        // editor准备好之后才可以使用
-        ue.setContent(content);
-
-        });
 	//表单验证
 	$("#form-article-add").validate({
 		rules:{
-			tourname:{
+			name:{
 				required:true,
 			},
-			tourcolumn:{
+			column:{
 				required:true,
 			},
-			tourtype:{
-				required:true,
-			},
-			tourad:{
-				required:true,
-			},
-			abstracts:{
+			info:{
 				required:true,
 			},
 			commentdatemin:{
-				required:true,
-			},
-			author:{
 				required:true,
 			}
 		},
@@ -310,6 +254,5 @@ $(function(){
 	});
 });
 </script>
-<!--/请在上方写此页面业务相关的脚本-->
 </body>
 </html>

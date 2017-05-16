@@ -18,10 +18,33 @@ class IndexAction extends Action {
 		$this->assign('hotel',$arr2);
 		
 		//展示4个热门路线
-	
-	
-	
-	
+		
+		
+		
+		
+		
+		//展示6个热门美食
+		$c=M('Cases');
+		$cidmax=$c->max('cid');
+		$where4['cid']=array('elt',$cidmax);
+		$arr4 = $c->where($where4)->limit(6)->order('cid desc')->getField('cid,cname,ccity');
+		$this->assign('cases',$arr4);
+		
+		//展示6个热门特产
+		$p=M('Produces');
+		$pidmax=$p->max('pid');
+		$where5['pid']=array('elt',$pidmax);
+		$arr5 = $p->where($where5)->limit(6)->order('pid desc')->getField('pid,pname,pcity');
+		$this->assign('produces',$arr5);
+		
+		//展示6个热门资讯
+		$f=M('Info');
+		$fidmax=$f->max('fid');
+		$where6['fid']=array('elt',$fidmax);
+		$arr6 = $f->where($where6)->limit(6)->order('fid desc')->getField('fid,fname');
+		$this->assign('info',$arr6);
+		var_dump($arr6);
+		
 		$this->display();
     }
 	

@@ -82,7 +82,7 @@
 					<td><?php echo ($vo["tlevel"]); ?></td>
 					<td><?php echo ($vo["ttype"]); ?></td>
 					<td><?php echo ($vo["taddress"]); ?></td>
-					<td><?php echo ($vo["tabtract"]); ?></td>
+					<td><?php echo ($vo["tabstract"]); ?></td>
 					<td><?php echo ($vo["topentime"]); ?></td>
 					<td><?php echo ($vo["ticket"]); ?></td>
 					<td><?php echo ($vo["tbimg"]); ?></td>

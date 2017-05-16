@@ -181,12 +181,9 @@
       	    <div class="col-md-4"><div class="title-box clearfix "><h4 class="title-box_primary">美食小吃</h4></div> 
             <div class="list styled custom-list">
             <ul>
-            <li><a title="Snatoque penatibus et magnis dis partu rient montes ascetur ridiculus mus." href="#">Singapore Township</a></li>
-            <li><a title="Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus." href="#">Mega luxury Villas</a></li>
-            <li><a title="Penatibus et magnis dis parturient montes ascetur ridiculus mus." href="#">RNT Commercial Shopping Mall</a></li>
-            <li><a title="Morbi nunc odio gravida at cursus nec luctus a lorem. Maecenas tristique orci." href="#">SVN Independent & Duplex Houses</a></li>
-            <li><a title="Snatoque penatibus et magnis dis partu rient montes ascetur ridiculus mus." href="#">World wide IT park</a></li>
-            <li><a title="Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus." href="#">North Arena SNT Township</a></li>
+			<volist name="cases" id="c">
+            <li data-cid="<{$c.cid}>"><a title="<{$c.cname}>" href="#"><{$c.cname}> & <{$c.ccity}></a></li>
+			</volist>
             </ul>
             </div>
          </div>
@@ -194,29 +191,25 @@
         <div class="col-md-4"><div class="title-box clearfix "><h4 class="title-box_primary">土特产</h4></div> 
             <div class="list styled custom-list">
             <ul>
-            <li><a title="Snatoque penatibus et magnis dis partu rient montes ascetur ridiculus mus." href="#">Singapore Township</a></li>
-            <li><a title="Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus." href="#">Mega luxury Villas</a></li>
-            <li><a title="Penatibus et magnis dis parturient montes ascetur ridiculus mus." href="#">RNT Commercial Shopping Mall</a></li>
-            <li><a title="Morbi nunc odio gravida at cursus nec luctus a lorem. Maecenas tristique orci." href="#">SVN Independent & Duplex Houses</a></li>
-            <li><a title="Snatoque penatibus et magnis dis partu rient montes ascetur ridiculus mus." href="#">World wide IT park</a></li>
-            <li><a title="Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus." href="#">North Arena SNT Township</a></li>
+			<volist name="produces" id="p">
+            <li data-pid="<{$p.pid}>"><a title="<{$p.pname}>" href="#"><{$p.pname}> & <{$p.pcity}></a></li>
+			</volist>
             </ul>
             </div>
          </div>
          <div class="col-md-4"><div class="title-box clearfix "><h4 class="title-box_primary">旅游资讯</h4></div> 
             <div class="list styled custom-list">
             <ul>
-            <li><a title="Snatoque penatibus et magnis dis partu rient montes ascetur ridiculus mus." href="#">Singapore Township</a></li>
-            <li><a title="Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus." href="#">Mega luxury Villas</a></li>
-            <li><a title="Penatibus et magnis dis parturient montes ascetur ridiculus mus." href="#">RNT Commercial Shopping Mall</a></li>
-            <li><a title="Morbi nunc odio gravida at cursus nec luctus a lorem. Maecenas tristique orci." href="#">SVN Independent & Duplex Houses</a></li>
-            <li><a title="Snatoque penatibus et magnis dis partu rient montes ascetur ridiculus mus." href="#">World wide IT park</a></li>
-            <li><a title="Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus." href="#">North Arena SNT Township</a></li>
+			<volist name="info" id="f">
+            <li data-fid="<{$f.fid}>"><a title="<{$f.fname}>" href="#"><{$f.fname}></a></li>
+			</volist>
             </ul>
             </div>
          </div>
          
-      </div></div>
+      </div>
+	  
+	  </div>
       </section>
       <include file="Public:footer" />
 	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->

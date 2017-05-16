@@ -97,7 +97,6 @@
 		}
 		//更新景点存入数据库
 		public function do_uptour(){
-			//$m=M('Admin');
 			if($_SESSION['aname'] == $_POST['tourname']){
 				$t=M('Tourist');
 				$data['aname']=$_POST['aname'];
