@@ -21,7 +21,7 @@
 <script>DD_belatedPNG.fix('*');</script>
 <![endif]-->
 
-<title>新增图片</title>
+<title>新增酒店</title>
 <link href="__PUBLIC__/lib/webuploader/0.1.5/webuploader.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -53,13 +53,13 @@
 			</div>
 		</div>
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">联系电话：</label>
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>联系电话：</label>
 			<div class="formControls col-xs-8 col-sm-9">
 				<input type="tel" class="input-text" value="" placeholder="0917-7427109" id="hotelphone" name="hotelphone">
 			</div>
 		</div>
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">景点等级：</label>
+			<label class="form-label col-xs-4 col-sm-2">酒店等级：</label>
 			<div class="formControls col-xs-8 col-sm-9">
 				<input type="text" class="input-text" value="" placeholder="AAAA" id="hotellevel" name="hotellevel">
 			</div>
@@ -79,12 +79,12 @@
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>酒店简介：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<textarea name="abstracts" cols="" rows="" class="textarea"  placeholder="一句话介绍该酒店...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="$.Huitextarealength(this,200)"></textarea>
+				<textarea name="hotelinfo" cols="" rows="" class="textarea"  placeholder="一句话介绍该酒店...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="$.Huitextarealength(this,200)"></textarea>
 				<p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
 			</div>
 		</div>
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">景点图片：</label>
+			<label class="form-label col-xs-4 col-sm-2">酒店图片：</label>
 			<div class="formControls col-xs-8 col-sm-9">
 				<input type="hidden" value="" name="imgfile"/>
 				<div class="uploader-thum-container">
@@ -108,7 +108,7 @@
 		</div>
 		<div class="row cl">
 			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
-				<button onClick="article_save_submit();" class="btn btn-primary radius" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存并提交审核</button>
+				<button class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存并提交审核</button>
 				<button onClick="article_save();" class="btn btn-secondary radius" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存草稿</button>
 				<button onClick="layer_close();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
 			</div>
@@ -137,37 +137,36 @@ function article_save(){
 }
 
 $(function(){
-	
 	//图片上传
-	$list = $("#fileList"),
+	$list = $("#fileList"),  //
 	$btn = $("#btn-star"),
 	state = "pending",
 	uploader;
-
+	var thumbnailWidth = 100; 
+	var thumbnailHeight = 100; 
+	//选择图片前的准备工作
 	var uploader = WebUploader.create({
-		auto: true,
-		swf: 'lib/webuploader/0.1.5/Uploader.swf',
-	
+		auto: false,//选完文件后是否自动上传
+		swf: '__PUBLIC__/lib/webuploader/0.1.5/Uploader.swf',// swf文件路径  
 		// 文件接收服务端。
-		server: 'lib/webuploader/0.1.5/server/fileupload.php',
-	
+		server: '__URL__/FileUpload',
 		// 选择文件的按钮。可选。
 		// 内部根据当前运行是创建，可能是input元素，也可能是flash.
 		pick: '#filePicker',
-	
 		// 不压缩image, 默认如果是jpeg，文件上传前会压缩一把再上传！
-		resize: false,
+	//	resize: false,
 		// 只允许选择图片文件。
 		accept: {
 			title: 'Images',
 			extensions: 'gif,jpg,jpeg,bmp,png',
 			mimeTypes: 'image/*'
-		}
+		},
+		method:'post'
 	});
-	uploader.on( 'fileQueued', function( file ) {
+	uploader.on( 'fileQueued', function( file ) {//webuploader事件.当选择文件后，文件被加载到文件队列中，触发该事件  
 		var $li = $(
 			'<div id="' + file.id + '" class="item">' +
-				'<div class="pic-box"><img></div>'+
+				'<div class="pic-box"><img/></div>'+
 				'<div class="info">' + file.name + '</div>' +
 				'<p class="state">等待上传...</p>'+
 			'</div>'
@@ -178,7 +177,7 @@ $(function(){
 		// 创建缩略图
 		// 如果为非图片文件，可以不用调用此方法。
 		// thumbnailWidth x thumbnailHeight 为 100 x 100
-		uploader.makeThumb( file, function( error, src ) {
+		uploader.makeThumb( file, function( error, src ) { //webuploader方法
 			if ( error ) {
 				$img.replaceWith('<span>不能预览</span>');
 				return;
@@ -186,6 +185,8 @@ $(function(){
 	
 			$img.attr( 'src', src );
 		}, thumbnailWidth, thumbnailHeight );
+		
+		
 	});
 	// 文件上传过程中创建进度条实时显示。
 	uploader.on( 'uploadProgress', function( file, percentage ) {
@@ -201,8 +202,11 @@ $(function(){
 	});
 	
 	// 文件上传成功，给item添加成功class, 用样式标记上传成功。
-	uploader.on( 'uploadSuccess', function( file ) {
+	uploader.on( 'uploadSuccess', function(file,json) {
+		var url=json.url;
+		//console.log(url);
 		$( '#'+file.id ).addClass('upload-state-success').find(".state").text("已上传");
+		$('input[name="imgfile"]').val(url);
 	});
 	
 	// 文件上传失败，显示上传出错。
@@ -229,7 +233,7 @@ $(function(){
             $btn.text('开始上传');
         }
     });
-
+	
     $btn.on('click', function () {
         if (state === 'uploading') {
             uploader.stop();
@@ -238,29 +242,28 @@ $(function(){
         }
     });
 	
-	
 	//表单验证
 	$("#form-article-add").validate({
 		rules:{
-			tourname:{
+			hotelname:{
 				required:true,
 			},
-			tourcolumn:{
+			hotelcolumn:{
 				required:true,
 			},
-			tourtype:{
+			hotelphone:{
 				required:true,
 			},
-			tourad:{
+			hotellevel:{
 				required:true,
 			},
-			abstracts:{
+			hoteladr:{
+				required:true,
+			},
+			hotelinfo:{
 				required:true,
 			},
 			commentdatemin:{
-				required:true,
-			},
-			author:{
 				required:true,
 			}
 		},
@@ -275,13 +278,8 @@ $(function(){
 						var index = parent.layer.getFrameIndex(window.name);
 						parent.$('.btn-refresh').click();
 						parent.layer.close(index);
-					//	removeIframe();//关闭当前页面
+					}else{
 					}
-					//console.log(msg);
-				},
-				error:function(msg){
-					//console.log(msg+'0');
-					alert('新增失败了');
 				}
 			});   
 		}

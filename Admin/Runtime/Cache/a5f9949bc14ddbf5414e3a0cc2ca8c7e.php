@@ -66,7 +66,7 @@
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>景点类型：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="<?php echo ($data["ttype"]); ?>" placeholder="园林,公园,亭台楼阁" id="tourtype" name="tourtype">
+				<input type="text" class="input-text" value="<?php echo ($data["ttype"]); ?>" placeholder="园林,公园,亭台楼阁,游乐场,森林,山脉,红色旅游,陵墓,古镇" id="tourtype" name="tourtype">
 			</div>
 		</div>
 		<div class="row cl">
@@ -78,7 +78,7 @@
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>景点简介：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<textarea name="abstracts" cols="" rows="" class="textarea"  placeholder="<?php echo ($data["tabstract"]); ?>" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="$.Huitextarealength(this,200)"></textarea>
+				<textarea name="abstracts" cols="" rows="" class="textarea"  placeholder="" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="$.Huitextarealength(this,200)"><?php echo ($data["tabstract"]); ?></textarea>
 				<p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
 			</div>
 		</div>
@@ -290,12 +290,12 @@ $(function(){
 				dataType:"json",
 				success:function(msg){
 					if(msg.status=='ok'){
-						//layer.msg(msg.,{icon:1,time:1000});
+						layer.msg(msg.info,{icon:1,time:1000});
 						var index = parent.layer.getFrameIndex(window.name);
 						parent.$('.btn-refresh').click();
 						parent.layer.close(index);
 					}else{
-						//layer.msg(msg,{icon:1,time:3000});
+						layer.msg(msg.info,{icon:1,time:3000});
 					}
 				}
 			});   

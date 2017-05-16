@@ -69,7 +69,7 @@
 					<td><?php echo ($vo["aname"]); ?></td>
 					<td><?php echo ($vo["hctime"]); ?></td>
 					<td class="td-status"><span class="label label-success radius">已发布</span></td>
-					<td class="td-manage"><a style="text-decoration:none" onClick="picture_stop(this,'10001')" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a> <a style="text-decoration:none" class="ml-5" onClick="picture_edit('图库编辑','picture-add.html','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="picture_del(this,'<?php echo ($vo["hid"]); ?>','<?php echo ($vo["aname"]); ?>')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+					<td class="td-manage"><a style="text-decoration:none" onClick="picture_stop(this,'10001')" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a> <a style="text-decoration:none" class="ml-5" onClick="picture_edit('酒店信息编辑','__URL__/uphotel?hid=<?php echo ($vo["hid"]); ?>','<?php echo ($vo["hid"]); ?>')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="picture_del(this,'<?php echo ($vo["hid"]); ?>','<?php echo ($vo["aname"]); ?>')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
 				</tr><?php endforeach; endif; else: echo "" ;endif; ?>
 			</tbody>
 		</table>
@@ -178,8 +178,8 @@ function picture_shenqing(obj,id){
 	layer.msg('已提交申请，耐心等待审核!', {icon: 1,time:2000});
 }
 
-/*图片-编辑*/
-function picture_edit(title,url,id){
+/*酒店-编辑*/
+function picture_edit(title,url,hid){
 	var index = layer.open({
 		type: 2,
 		title: title,

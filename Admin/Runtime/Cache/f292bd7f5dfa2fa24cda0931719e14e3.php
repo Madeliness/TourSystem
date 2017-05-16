@@ -294,16 +294,13 @@ $(function(){
 				dataType:"json",
 				success:function(msg){
 					if(msg.status=='ok'){
+						layer.msg(msg.info,{icon:1,time:1000});
 						var index = parent.layer.getFrameIndex(window.name);
 						parent.$('.btn-refresh').click();
 						parent.layer.close(index);
-					//	removeIframe();//关闭当前页面
+					}else{
+						layer.msg(msg.info,{icon:1,time:1000});
 					}
-					//console.log(msg);
-				},
-				error:function(msg){
-					//console.log(msg+'0');
-					alert('新增失败了');
 				}
 			});   
 		}
