@@ -52,18 +52,19 @@
 				$this->ajaxReturn($info,'json');
 			 }else{// 上传成功 获取上传文件信息
 				$info =  $upload->getUploadFileInfo();
-				var_dump($info);
+			//	var_dump($info);
 				$save_url = '';
-				foreach($info as $val){
+				foreach($info as $val){json.
 					$save_url .= $val['savepath'].$val['savename'];
 				// $save_url .= $save_url.','.$save_url_1;
 				}
-				$data['url']=$save_url;
-				$data['status']=0;
-				$this->ajaxReturn($data,'json');
+			//	$data['url']=$save_url;
+			//	$data['status']=0;
+			//	print_r($data);
+				$this->ajaxReturn($save_url,'JSON');
 			 }
 			 
-			$this->ajaxReturn('不存在','JSON');
+			$this->ajaxReturn('不存在','JSON'); 
 		 }
 		 //发布景点信息存储
 		 public function do_addtour(){
@@ -76,7 +77,7 @@
 			$data['tabstract']=$_POST['abstracts'];
 			$data['ticket']=$_POST['ticket'];
 			$data['tinfo']=$_POST['editorValue'];
-			$data['tbimg']=$_POST['file'];
+			$data['tbimg']=$_POST['imgfile'];
 			$data['tline']=$_POST['tourline'];
 			$data['aname']=$_POST['author'];
 			$data['tctime']=$_POST['commentdatemin'];
@@ -92,6 +93,7 @@
 			$t=M('Tourist');
 			$tid=$_GET['tid'];
 			$arr = $t -> find($tid);
+			var_dump($arr);
 			$this->assign('data',$arr);
 			$this->display('uptour');
 		}
@@ -107,7 +109,7 @@
 				$data['tabstract']=$_POST['abstracts'];
 				$data['ticket']=$_POST['ticket'];
 				$data['tinfo']=$_POST['editorValue'];
-				$data['tbimg']=$_POST['file'];
+				$data['tbimg']=$_POST['imgfile'];
 				$data['tline']=$_POST['tourline'];
 				$data['aname']=$_POST['author'];
 				$data['tctime']=$_POST['commentdatemin'];

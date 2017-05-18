@@ -97,6 +97,7 @@
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">景点图片：</label>
 			<div class="formControls col-xs-8 col-sm-9">
+				<input type="hidden" value="" name="imgfile"/>
 				<div class="uploader-thum-container">
 					<div id="fileList" class="uploader-list"></div>
 					<div id="filePicker">选择图片</div>
@@ -155,7 +156,14 @@ $(function(){
 		radioClass: 'iradio-blue',
 		increaseArea: '20%'
 	}); */
-	
+	var ue = UE.getEditor('editor');
+	 var content ='<{$data.tinfo}>';
+        //判断ueditor 编辑器是否创建成功
+        ue.addListener("ready", function () {
+        // editor准备好之后才可以使用
+        ue.setContent(content);
+
+        });
 	//图片上传
 	$list = $("#fileList"),  
 	$btn = $("#btn-star"),
@@ -219,8 +227,10 @@ $(function(){
 	});
 	
 	// 文件上传成功，给item添加成功class, 用样式标记上传成功。
-	uploader.on( 'uploadSuccess', function( file ) {
+	uploader.on( 'uploadSuccess', function(file,json) {
+		console.log(json);
 		$( '#'+file.id ).addClass('upload-state-success').find(".state").text("已上传");
+		$('input[name="imgfile"]').val(json);
 	});
 	
 	// 文件上传失败，显示上传出错。
@@ -256,14 +266,14 @@ $(function(){
         }
     });
 	
-	var ue = UE.getEditor('editor');
-	 var content ='<{$data.tinfo}>';
+	//var ue = UE.getEditor('editor');
+	// var content ='<{$data.tinfo}>';
         //判断ueditor 编辑器是否创建成功
-        ue.addListener("ready", function () {
+    //    ue.addListener("ready", function () {
         // editor准备好之后才可以使用
-        ue.setContent(content);
+    //    ue.setContent(content);
 
-        });
+   //     });
 	//表单验证
 	$("#form-article-add").validate({
 		rules:{
