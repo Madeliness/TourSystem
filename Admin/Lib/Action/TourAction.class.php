@@ -52,15 +52,10 @@
 				$this->ajaxReturn($info,'json');
 			 }else{// 上传成功 获取上传文件信息
 				$info =  $upload->getUploadFileInfo();
-			//	var_dump($info);
 				$save_url = '';
-				foreach($info as $val){json.
+				foreach($info as $val){
 					$save_url .= $val['savepath'].$val['savename'];
-				// $save_url .= $save_url.','.$save_url_1;
 				}
-			//	$data['url']=$save_url;
-			//	$data['status']=0;
-			//	print_r($data);
 				$this->ajaxReturn($save_url,'JSON');
 			 }
 			 
@@ -93,7 +88,7 @@
 			$t=M('Tourist');
 			$tid=$_GET['tid'];
 			$arr = $t -> find($tid);
-			var_dump($arr);
+			//var_dump($arr);
 			$this->assign('data',$arr);
 			$this->display('uptour');
 		}
@@ -101,7 +96,6 @@
 		public function do_uptour(){
 			if($_SESSION['aname'] == $_POST['author']){
 				$t=M('Tourist');
-				//$data['aname']=$_POST['author'];
 				$data['tcity']=$_POST['tourcolumn'];
 				$data['tlevel']=$_POST['tourlevel'];
 				$data['ttype']=$_POST['tourtype'];

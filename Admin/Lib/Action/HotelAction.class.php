@@ -55,9 +55,9 @@
 					$save_url .= $val['savepath'].$val['savename'];
 				// $save_url .= $save_url.','.$save_url_1;
 				}
-				$data['url']=$save_url;
-				$data['status']=0;
-				$this->ajaxReturn($data,'json');
+			//	$data['url']=$save_url;
+			//	$data['status']=0;
+				$this->ajaxReturn($save_url,'json');
 				//$this->assign('img_url',$data);
 				//$this->display('addhotel');
 			 }

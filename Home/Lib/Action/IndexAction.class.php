@@ -14,7 +14,7 @@ class IndexAction extends Action {
 		$h=M('Hotel');
 		$hidmax=$h->max('hid');
 		$where2['hid']=array('elt',$hidmax);
-		$arr2 = $h->where($where2)->limit(4)->order('hid desc')->getField('hid,hname,hcity,hlevel,hphone');
+		$arr2 = $h->where($where2)->limit(4)->order('hid desc')->getField('hid,hname,hcity,hlevel,hphone,hbimg');
 		$this->assign('hotel',$arr2);
 		
 		//展示4个热门路线

@@ -151,11 +151,6 @@
 <script type="text/javascript" src="__PUBLIC__/lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
 <script type="text/javascript">
 $(function(){
-	/* $('.skin-minimal input').iCheck({
-		checkboxClass: 'icheckbox-blue',
-		radioClass: 'iradio-blue',
-		increaseArea: '20%'
-	}); */
 	var ue = UE.getEditor('editor');
 	 var content ='<{$data.tinfo}>';
         //判断ueditor 编辑器是否创建成功
@@ -265,59 +260,53 @@ $(function(){
             uploader.upload();
         }
     });
-	
-	//var ue = UE.getEditor('editor');
-	// var content ='<{$data.tinfo}>';
-        //判断ueditor 编辑器是否创建成功
-    //    ue.addListener("ready", function () {
-        // editor准备好之后才可以使用
-    //    ue.setContent(content);
-
-   //     });
 	//表单验证
-	$("#form-article-add").validate({
-		rules:{
-			tourname:{
-				required:true,
-			},
-			tourcolumn:{
-				required:true,
-			},
-			tourtype:{
-				required:true,
-			},
-			tourad:{
-				required:true,
-			},
-			abstracts:{
-				required:true,
-			},
-			commentdatemin:{
-				required:true,
-			},
-			author:{
-				required:true,
-			}
-		},
-		onkeyup:false,   //指定是否在敲击键盘时验证，默认为true
-		focusCleanup:true,   //当未通过验证的元素获得焦点时，移除错误提示，默认为false
-		success:"valid",
-		submitHandler:function(form){   //通过验证后运行的函数，里面要加上表单提交的函数，否则表单不会提交
-			$(form).ajaxSubmit({   //ajax方式提交
-				dataType:"json",
-				success:function(msg){
-					if(msg.status=='ok'){
-						layer.msg(msg.info,{icon:1,time:1000});
-						var index = parent.layer.getFrameIndex(window.name);
-						parent.$('.btn-refresh').click();
-						parent.layer.close(index);
-					}else{
-						layer.msg(msg.info,{icon:1,time:1000});
-					}
+	setTimeout(function(){
+		$("#form-article-add").validate({
+			rules:{
+				tourname:{
+					required:true,
+				},
+				tourcolumn:{
+					required:true,
+				},
+				tourtype:{
+					required:true,
+				},
+				tourad:{
+					required:true,
+				},
+				abstracts:{
+					required:true,
+				},
+				commentdatemin:{
+					required:true,
+				},
+				author:{
+					required:true,
 				}
-			});   
-		}
-	});
+			},
+			onkeyup:false,   //指定是否在敲击键盘时验证，默认为true
+			focusCleanup:true,   //当未通过验证的元素获得焦点时，移除错误提示，默认为false
+			success:"valid",
+			submitHandler:function(form){   //通过验证后运行的函数，里面要加上表单提交的函数，否则表单不会提交
+				$(form).ajaxSubmit({   //ajax方式提交
+					dataType:"json",
+					success:function(msg){
+						if(msg.status=='ok'){
+							layer.msg(msg.info,{icon:1,time:1000});
+							var index = parent.layer.getFrameIndex(window.name);
+							parent.$('.btn-refresh').click();
+							parent.layer.close(index);
+						}else{
+							layer.msg(msg.info,{icon:1,time:1000});
+						}
+					}
+				});   
+			}
+		});
+	},15000);
+	
 });
 </script>
 <!--/请在上方写此页面业务相关的脚本-->

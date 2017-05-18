@@ -203,10 +203,8 @@ $(function(){
 	
 	// 文件上传成功，给item添加成功class, 用样式标记上传成功。
 	uploader.on( 'uploadSuccess', function(file,json) {
-		var url=json.url;
-		//console.log(url);
 		$( '#'+file.id ).addClass('upload-state-success').find(".state").text("已上传");
-		$('input[name="imgfile"]').val(url);
+		$('input[name="imgfile"]').val(json);
 	});
 	
 	// 文件上传失败，显示上传出错。
