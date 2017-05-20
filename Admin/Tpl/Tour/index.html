@@ -63,9 +63,8 @@
 					<th>景点类型</th>
 					<th>景点地址</th>
 					<th>景点简介</th>
-					<th>开放时间</th>
 					<th>门票信息</th>
-					<th>相关大图</th>
+					<th>景点图片</th>
 					<th>公交路线</th>
 					<th>发布人</th>
 					<th>更新时间</th>
@@ -84,7 +83,6 @@
 					<td><{$vo.ttype}></td>
 					<td><{$vo.taddress}></td>
 					<td><{$vo.tabstract}></td>
-					<td><{$vo.topentime}></td>
 					<td><{$vo.ticket}></td>
 					<td><img src="__ROOT__/<{$vo.tbimg}>" style="width:30px;height:30px"></td>
 					<td><{$vo.tline}></td>
@@ -222,17 +220,5 @@ function article_shenqing(obj,id){
 }
 
 </script> 
-<script>
-//美化滚动条
-/* $(".nicescroll").niceScroll({  
-		cursorcolor:"#caeffb",  
-		cursoropacitymax:1,  
-		touchbehavior:false,  
-		cursorwidth:"8px",  
-		cursorborder:"0",  
-		cursorborderradius:"4px",
-		horizrailenabled:true
-	}); */	
-</script>
 </body>
 </html>

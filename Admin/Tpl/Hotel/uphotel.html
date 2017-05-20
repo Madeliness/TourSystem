@@ -40,7 +40,7 @@
 				<span class="select-box">
 					<select name="hotelcolumn" class="select" value="<{$data.hcity}>">
 						<option value="西安">西安</option>
-						<option value="宝鸡" select="selected">宝鸡</option>
+						<option value="宝鸡">宝鸡</option>
 						<option value="铜川">铜川</option>
 						<option value="咸阳">咸阳</option>
 						<option value="渭南">渭南</option>
@@ -104,7 +104,7 @@
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>发布日期：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" onfocus="WdatePicker({startDate:'%y',dateFmt:'yyyy-MM-dd',maxDate:'%y-%M-%d',minDate:'%y-%M-%d'})" id="commentdatemin" name="commentdatemin" class="input-text Wdate" value="<{$data.hctime}>">
+				<input type="text" onfocus="WdatePicker({startDate:'%y',dateFmt:'yyyy-MM-dd',maxDate:'%y-%M-%d',minDate:'%y-%M-%d'})" id="commentdatemin" name="commentdatemin" class="input-text Wdate" value="">
 			</div>
 		</div>
 		<div class="row cl">
@@ -204,10 +204,8 @@ $(function(){
 	
 	// 文件上传成功，给item添加成功class, 用样式标记上传成功。
 	uploader.on( 'uploadSuccess', function(file,json) {
-		var url=json.url;
-		//console.log(url);
 		$( '#'+file.id ).addClass('upload-state-success').find(".state").text("已上传");
-		$('input[name="imgfile"]').val(url);
+		$('input[name="imgfile"]').val(json);
 	});
 	
 	// 文件上传失败，显示上传出错。
@@ -275,11 +273,13 @@ $(function(){
 				dataType:"json",
 				success:function(msg){
 					if(msg.status=='ok'){
+						layer.msg(msg.info,{icon:1,time:1000});
 						var index = parent.layer.getFrameIndex(window.name);
 						parent.$('.btn-refresh').click();
+						
 						parent.layer.close(index);
 					}else{
-					
+						layer.msg(msg.info,{icon:1,time:1000});
 					}
 				}
 			});   

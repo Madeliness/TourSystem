@@ -69,7 +69,12 @@
 									<volist name="list" id="v">
 									<article class="col-sm-4 isotopeItem webdesign" data-tid="<{$v.tid}>">
 										<div class="portfolio-item">
-											<img src="__PUBLIC__/assets/images/portfolio/img1.jpg" alt="" />
+											<if condition="$v.tbimg eq null">
+												<img src="/TourSystem/Public/IMGS/tour/002.jpg" alt="风景图" />
+												<else/>
+												<img src="__ROOT__/<{$v.tbimg}>" alt="风景图" />
+											</if>
+											
 											<div class="portfolio-desc align-center">
 												<div class="folio-info">
 													<a href="__PUBLIC__/assets/images/portfolio/img1.jpg" class="fancybox">

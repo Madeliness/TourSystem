@@ -65,15 +65,9 @@
 			</div>
 		</div>
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">房间信息：</label>
-			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="查看详情" placeholder="查看详情" disabled="disabled" id="hroom" name="hroom">
-			</div>
-		</div>
-		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">酒店地址：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="0" placeholder="陕西省宝鸡市行政中心西300米" id="hoteladr" name="hoteladr">
+				<input type="text" class="input-text" value="" placeholder="陕西省宝鸡市行政中心西300米" id="hoteladr" name="hoteladr">
 			</div>
 		</div>
 		<div class="row cl">
@@ -273,10 +267,13 @@ $(function(){
 				dataType:"json",
 				success:function(msg){
 					if(msg.status=='ok'){
+						layer.msg(msg.info,{icon:1,time:1000});
 						var index = parent.layer.getFrameIndex(window.name);
 						parent.$('.btn-refresh').click();
+						
 						parent.layer.close(index);
 					}else{
+						layer.msg(msg.info,{icon:1,time:1000});
 					}
 				}
 			});   

@@ -47,7 +47,6 @@
 			 $upload->allowExts  = array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
 			 $upload->savePath =  './Public/IMGS/tour/';// 设置附件上传目录
 			 if(!$upload->upload()) {// 上传错误提示错误信息
-				// $this->error($upload->getErrorMsg());
 				$info=$upload->getErrorMsg();
 				$this->ajaxReturn($info,'json');
 			 }else{// 上传成功 获取上传文件信息
@@ -71,7 +70,6 @@
 			$data['taddress']=$_POST['tourad'];
 			$data['tabstract']=$_POST['abstracts'];
 			$data['ticket']=$_POST['ticket'];
-			$data['tinfo']=$_POST['editorValue'];
 			$data['tbimg']=$_POST['imgfile'];
 			$data['tline']=$_POST['tourline'];
 			$data['aname']=$_POST['author'];
@@ -88,7 +86,6 @@
 			$t=M('Tourist');
 			$tid=$_GET['tid'];
 			$arr = $t -> find($tid);
-			//var_dump($arr);
 			$this->assign('data',$arr);
 			$this->display('uptour');
 		}
@@ -96,13 +93,13 @@
 		public function do_uptour(){
 			if($_SESSION['aname'] == $_POST['author']){
 				$t=M('Tourist');
+				$data['tname']=$_POST['tourname'];
 				$data['tcity']=$_POST['tourcolumn'];
 				$data['tlevel']=$_POST['tourlevel'];
 				$data['ttype']=$_POST['tourtype'];
 				$data['taddress']=$_POST['tourad'];
 				$data['tabstract']=$_POST['abstracts'];
 				$data['ticket']=$_POST['ticket'];
-				$data['tinfo']=$_POST['editorValue'];
 				$data['tbimg']=$_POST['imgfile'];
 				$data['tline']=$_POST['tourline'];
 				$data['aname']=$_POST['author'];
