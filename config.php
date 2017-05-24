@@ -1,7 +1,6 @@
 <?php
 return array(
 	//'配置项'=>'配置值'
-	//'URL_PATHINFO_DEPR' => '-'
 	'TMPL_L_DELIM'=>'<{',
 	'TMPL_R_DELIM'=>'}>',
 	'DB_TYPE'=>'mysql',
@@ -11,7 +10,6 @@ return array(
 	'DB_PWD'=>'123456',
 	'DB_PORT'=>'3306',
 	'DB_PREFIX'=>'tp_',
-	//'DB_DNS'=>'mysql://root:root@localhost:3306/test02',
 	'SHOW_PAGE_TRACE'=>true,
 	'APP_STATUS' => 'debug', 
 );

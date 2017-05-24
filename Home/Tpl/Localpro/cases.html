@@ -42,7 +42,7 @@
 		<section class="container">
 			<h3>美食列表</h3>
 			<div class="row">
-				<volist name="cases" id="c">
+				<volist name="list" id="c">
 				<div class="col-md-4">
 					<div class="featured-box" data-cid="<{$c.cid}>">
 						<i class="fa fa-cogs fa-2x"></i>
@@ -72,6 +72,7 @@
 			</section>
 		</div>
 	</div>
+	<p  style="text-align:center;"><{$page}></p>
 	<!-- /container -->
 	<include file="Public:footer" />
 	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->

@@ -129,7 +129,6 @@
 				return false;
 			}
 			$.get('__URL__/Checkname',{'aaname':aaname},function(data){
-				//	console.log(data);
 					if (data=='1') {
 						$('#user').focus().css({
 							border: "1px solid red",
@@ -168,27 +167,10 @@
 				$("#userCue").html("<font color='blue'><b>两次密码一致</b></font>");
 			}
 		});
-		/* var sqq = /^[1-9]{1}[0-9]{4,9}$/;
-		if (!sqq.test($('#qq').val()) || $('#qq').val().length < 5 || $('#qq').val().length > 12) {
-			$('#qq').focus().css({
-				border: "1px solid red",
-				boxShadow: "0 0 2px red"
-			});
-			$('#userCue').html("<font color='red'><b>×QQ号码格式不正确</b></font>");return false;
-		} else {
-			$('#qq').css({
-				border: "1px solid #D7D7D7",
-				boxShadow: "none"
-			});
-			
-		} */
 		$('#reg').click(function() {
-		//	alert('1');
 			document.myreg.submit();
 		});
 		
-	//});
-	
 	});
 	function sub(){
 		var an=document.mylogin.aname;

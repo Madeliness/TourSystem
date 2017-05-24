@@ -98,6 +98,7 @@
         <div class="container">
             <h3><span>热门线路推荐</span></h3>
             <div class="row">
+				<volist name="xianlu" id="x">
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                     <div class="newsBox">
                         <div class="thumbnail">
@@ -105,71 +106,18 @@
                             <div class="caption maxheight2">
                                 <div class="box_inner">
                                         <div class="box">
-                                            <p class="title"><strong>Lorem ipsum</strong></p>
-                                            <p>Lorem ipsum dolor sit amet, conc tetu er adipi scing. </p>
+                                            <p class="title"><strong><{$x.xname}>·<{$x.xcity}></strong></p>
+                                            <p>途径景点：<{$x.xtour}></p>
                                         </div>
                                         <div>
-                                            <a href="#" class="btn-inline">more</a>
+                                            <a href="#" class="btn-inline">预算：<{$x.xprice}></a>
                                         </div>
                                 </div>
                             </div> 
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                    <div class="newsBox">
-                        <div class="thumbnail">
-                            <figure><img src="__PUBLIC__/assets/images/news2.jpg" alt=""></figure>
-                            <div class="caption maxheight2">
-                            <div class="box_inner">
-                                        <div class="box">
-                                            <p class="title"><strong>Lorem ipsum</strong></p>
-                                            <p>Lorem ipsum dolor sit amet, conc tetu er adipi scing. </p>
-                                        </div>
-                                        <div>
-                                            <a href="#" class="btn-inline">more</a>
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                    <div class="newsBox">
-                        <div class="thumbnail">
-                            <figure><img src="__PUBLIC__/assets/images/news3.jpg" alt=""></figure>
-                            <div class="caption maxheight2">
-                            <div class="box_inner">
-                                        <div class="box">
-                                            <p class="title"><strong>Lorem ipsum</strong></p>
-                                            <p>Lorem ipsum dolor sit amet, conc tetu er adipi scing. </p>
-                                        </div>
-                                        <div>
-                                            <a href="#" class="btn-inline">more</a>
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                    <div class="newsBox">
-                        <div class="thumbnail">
-                            <figure><img src="__PUBLIC__/assets/images/news4.jpg" alt=""></figure>
-                            <div class="caption maxheight2">
-                           <div class="box_inner">
-                                        <div class="box">
-                                            <p class="title"><strong>Lorem ipsum</strong></p>
-                                            <p>Lorem ipsum dolor sit amet, conc tetu er adipi scing. </p>
-                                        </div>
-                                        <div>
-                                            <a href="#" class="btn-inline">more</a>
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+				</volist>
             </div>
         </div>
     </section>
