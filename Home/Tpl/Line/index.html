@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<meta name="description" content="Real Estate Builders Free Responsive Website Templates - icon"/>
 	<meta name="author" content=""/>
-	<title>风景首页</title>
+	<title>线路首页</title>
 	<link rel="favicon" href="__PUBLIC__/assets/images/favicon.png"/>
 	<link rel="stylesheet" href="__PUBLIC__/assets/css/bootstrap.min.css"/>
 	<!--<link rel="stylesheet" href="__PUBLIC__/assets/css/font-awesome.min.css"/>-->
@@ -34,9 +34,68 @@
 	</header>
 	<!-- container -->
 	<section class="container">
-		<h1>正在开发中...</h1>
+		<div class="row">
+			<div class="col-md-12">
+				<section id="portfolio" class="page-section section appear clearfix">
+					<br />
+					<br />
+					<p>
+						At lorem Ipsum available, but the majority have suffered alteration in some form by injected huffered altehe majority have suffered alteration in some form by injected huffered alteration in some form by injected humour.uffered alteration in some form by injected h
+					<br />
+						<br />
+					</p>
+
+
+					<div class="row">
+						<nav id="filter" class="col-md-12 text-center">
+							<ul>
+								<ul>
+								<li class="select">选择城市：</li>
+								<li><a href="#" class="current btn-theme btn-small">全部</a></li>
+								<li><a href="#" class="btn-theme btn-small">西安</a></li>
+								<li><a href="#" class="btn-theme btn-small">宝鸡</a></li>
+								<li><a href="#" class="btn-theme btn-small">铜川</a></li>
+								<li><a href="#" class="btn-theme btn-small">咸阳</a></li>
+								<li><a href="#" class="btn-theme btn-small">渭南</a></li>
+								<li><a href="#" class="btn-theme btn-small">延安</a></li>
+								<li><a href="#" class="btn-theme btn-small">汉中</a></li>
+								<li><a href="#" class="btn-theme btn-small">榆林</a></li>
+								<li><a href="#" class="btn-theme btn-small">安康</a></li>
+								<li><a href="#" class="btn-theme btn-small">商洛</a></li>
+							</ul>
+							</ul>
+						</nav>
+						<div class="col-md-12">
+							<div class="row">
+								<div class="portfolio-items isotopeWrapper clearfix" id="3">
+									<volist name="list" id="v">
+									<article class="col-sm-4 isotopeItem webdesign" data-tid="<{$v.xid}>">
+										<div class="portfolio-item">
+											<img src="__PUBLIC__/assets/images/portfolio/img9.jpg" alt="" />
+											<div class="portfolio-desc align-center">
+												<div class="folio-info">
+													<a href="__PUBLIC__/assets/images/portfolio/img1.jpg" class="fancybox">
+														<h5><{$v.xname}></h5>
+														<p><{$v.xtour}></p>
+														<i><{$v.xcity}></i></a>
+												</div>
+											</div>
+										</div>
+									</article>
+									</volist>
+								</div>
+
+							</div>
+
+
+						</div>
+					</div>
+
+				</section>
+			</div>
+		</div>
 	</section>
-	
+	<p style="text-align:center;"><{$page}></p>
 	<!-- /container -->
 	 <include file="Public:footer" />
 	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->

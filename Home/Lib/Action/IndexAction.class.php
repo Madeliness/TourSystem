@@ -15,7 +15,7 @@ class IndexAction extends Action {
 		$arr2 = $h->where($where2)->limit(4)->order('hid desc')->getField('hid,hname,hcity,hlevel,hphone,hbimg');
 		$this->assign('hotel',$arr2);
 		//展示4个热门路线
-		$x=M('Xianlu');
+		$x=M('Line');
 		$xidmax=$x->max('xid');
 		$where3['xid']=array('elt',$xidmax);
 		$arr3 = $x->where($where3)->limit(4)->order('xid desc')->getField('xid,xname,xcity,xtour,xbimg,xprice');
@@ -38,6 +38,9 @@ class IndexAction extends Action {
 		$where6['fid']=array('elt',$fidmax);
 		$arr6 = $f->where($where6)->limit(6)->order('fid desc')->getField('fid,fname');
 		$this->assign('info',$arr6);
+		var_dump($arr6);
+		
+		
 		$this->display();
     }
 }

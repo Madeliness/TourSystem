@@ -36,28 +36,6 @@
 		public function addhotel(){
 			$this->display();
 		}
-		//图片上传
-		// Public function FileUpload(){
-			// import('ORG.Net.UploadFile');
-			// $upload = new UploadFile();// 实例化上传类
-			// $upload->maxSize  = 314005728 ;// 设置附件上传大小
-			// $upload->allowExts  = array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
-			// $upload->savePath =  './Public/IMGS/hotel/';// 设置附件上传目录
-			// if(!$upload->upload()) {
-				// $this->error($upload->getErrorMsg());
-			//	$info=$upload->getErrorMsg();
-			//	$this->ajaxReturn($info,'json');
-			// }else{// 上传成功 获取上传文件信息
-			//	$info =  $upload->getUploadFileInfo();
-			//	var_dump($info);
-			//	$save_url = '';
-			//	foreach($info as $val){
-			//		$save_url .= $val['savepath'].$val['savename'];
-			//	}
-				//$this->ajaxReturn($save_url,'json');
-			// }
-			//$this->ajaxReturn('不存在','JSON');
-		// }
 		 Public function FileUpload(){
 			 import('ORG.Net.UploadFile');
 			 $upload = new UploadFile();// 实例化上传类
