@@ -12,22 +12,21 @@
 		//搜索酒店
 		public function search(){
 			$h=M('Hotel');
-			//$tsort=$_POST['toursort'];
 			$hmin=$_POST['logmin'];
 			$hmax=$_POST['logmax'];
 			$hcity=$_POST['cityname'];
 			if($hmin !='' && $hmax !='' ){
-				$where['tctime']=array(array('egt',$tmin),array('elt',$tmax));
+				$where['hctime']=array(array('egt',$hmin),array('elt',$hmax));
 			}else if($tmin !=''){
-				$where['tctime']=array('egt',$tmin);
+				$where['hctime']=array('egt',$hmin);
 			}else{
-				$where['tctime']=array('elt',$tmin);
+				$where['hctime']=array('elt',$hmin);
 			}
 			if($hcity !=''){
-				$where['tcity']=$hcity;
+				$where['hcity']=$hcity;
 			}
 			$arr=$h->where($where)->select();
-			$c=$t->count();
+			$c=$h->count();
 			$this->assign('count',$c);
 			$this->assign('data',$arr);
 			$this->display('index');

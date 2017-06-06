@@ -38,9 +38,7 @@ class IndexAction extends Action {
 		$where6['fid']=array('elt',$fidmax);
 		$arr6 = $f->where($where6)->limit(6)->order('fid desc')->getField('fid,fname');
 		$this->assign('info',$arr6);
-		var_dump($arr6);
-		
-		
+		//var_dump($arr6);
 		$this->display();
     }
 }

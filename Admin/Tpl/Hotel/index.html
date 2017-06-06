@@ -28,19 +28,18 @@
 		<button onclick="removeIframe()" class="btn btn-primary radius">关闭选项卡</button>
 		<form action="__URL__/search" method="post" name="h_search" style="display:inline-block;">
 			日期范围：
-			<input type="text" onfocus="WdatePicker({ maxDate:'#F{$dp.$D(\'logmax\')||\'%y-%M-%d\'}' })" id="logmin" class="input-text Wdate" style="width:120px;">
+			<input type="text" name="logmin" onfocus="WdatePicker({ maxDate:'#F{$dp.$D(\'logmax\')||\'%y-%M-%d\'}' })" id="logmin" class="input-text Wdate" style="width:120px;">
 			-
-			<input type="text" onfocus="WdatePicker({ minDate:'#F{$dp.$D(\'logmin\')}',maxDate:'%y-%M-%d' })" id="logmax" class="input-text Wdate" style="width:120px;">
+			<input type="text" name="logmax" onfocus="WdatePicker({ minDate:'#F{$dp.$D(\'logmax\')}',maxDate:'%y-%M-%d' })" id="logmax" class="input-text Wdate" style="width:120px;">
 			<input type="text" name="cityname" id="" placeholder=" 城市名称" style="width:250px" class="input-text">
 			<button name="" id="" class="btn btn-success" type="button" onClick="search_hotel()"><i class="Hui-iconfont">&#xe665;</i> 搜酒店</button>
 		</form>
 	</div>
-	<div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a class="btn btn-primary radius" onclick="picture_add('添加酒店','__URL__/addhotel')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 发布酒店</a></span> <span class="r">共有数据：<strong><{$count}></strong> 条</span> </div>
+	<div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a class="btn btn-primary radius" onclick="picture_add('添加酒店','__URL__/addhotel')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 发布酒店</a></span> <span class="r">共有数据：<strong><{$count}></strong> 条</span> </div>
 	<div class="mt-20 nicescroll">
 		<table class="table table-border table-bordered table-bg table-hover table-sort">
 			<thead>
 				<tr class="text-c">
-					<th><input name="" type="checkbox" value=""></th>
 					<th>酒店ID</th>
 					<th>酒店名称</th>
 					<th>所在城市</th>
@@ -58,7 +57,6 @@
 			<tbody>
 				<volist name="data" id="vo">
 				<tr class="text-c">
-					<td><input name="" type="checkbox" value=""></td>
 					<td><{$vo.hid}></td>
 					<td><{$vo.hname}></td>
 					<td><{$vo.hcity}></td>
@@ -92,7 +90,6 @@
 <script type="text/javascript">
 //搜索酒店
 function search_hotel(){
-//	var tsort=document.t_search.toursort;
 	var hmin=document.h_search.logmin;
 	var hmax=document.h_search.logmax;
 	var hcity=document.h_search.cityname;
@@ -105,11 +102,11 @@ function search_hotel(){
 
 //排序
 $('.table-sort').dataTable({
-	"aaSorting": [[ 1, "desc" ]],//默认第几个排序
+	"aaSorting": [[ 0, "desc" ]],//默认第几个排序
 	"bStateSave": true,//状态保存
 	"aoColumnDefs": [
 	  //{"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
-	  {"orderable":false,"aTargets":[0,8]}// 制定列不参与排序
+	  {"orderable":false,"aTargets":[8]}// 制定列不参与排序
 	]
 });
 

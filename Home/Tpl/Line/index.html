@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<meta name="description" content="Real Estate Builders Free Responsive Website Templates - icon"/>
-	<meta name="author" content=""/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Real Estate Builders Free Responsive Website Templates - icon">
+	<meta name="author" content="">
 	<title>线路首页</title>
-	<link rel="favicon" href="__PUBLIC__/assets/images/favicon.png"/>
-	<link rel="stylesheet" href="__PUBLIC__/assets/css/bootstrap.min.css"/>
-	<!--<link rel="stylesheet" href="__PUBLIC__/assets/css/font-awesome.min.css"/>-->
+	<link rel="favicon" href="__PUBLIC__/assets/images/favicon.png">
+	<link rel="stylesheet" href="__PUBLIC__/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="__PUBLIC__/assets/css/font-awesome.min.css">
 	<!-- Custom styles for our template -->
-	<link rel="stylesheet" href="__PUBLIC__/assets/css/bootstrap-theme.css" media="screen"/>
+	<link rel="stylesheet" href="__PUBLIC__/assets/css/bootstrap-theme.css" media="screen">
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/assets/css/isotope.css" media="screen" />
 	<link rel="stylesheet" href="__PUBLIC__/assets/js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="__PUBLIC__/assets/css/style.css">
@@ -27,11 +27,12 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-8">
-					<h3 style="margin-top: 35px;background:none;">路线列表</h3>
+					<h3 style="margin-top: 35px;background:none;">线路列表</h3>
 				</div>
 			</div>
 		</div>
 	</header>
+
 	<!-- container -->
 	<section class="container">
 		<div class="row">
@@ -39,16 +40,9 @@
 				<section id="portfolio" class="page-section section appear clearfix">
 					<br />
 					<br />
-					<p>
-						At lorem Ipsum available, but the majority have suffered alteration in some form by injected huffered altehe majority have suffered alteration in some form by injected huffered alteration in some form by injected humour.uffered alteration in some form by injected h
 					<br />
-						<br />
-					</p>
-
-
 					<div class="row">
-						<nav id="filter" class="col-md-12 text-center">
-							<ul>
+						<!-- <nav id="filter" class="col-md-12 text-center">
 								<ul>
 								<li class="select">选择城市：</li>
 								<li><a href="#" class="current btn-theme btn-small">全部</a></li>
@@ -63,15 +57,14 @@
 								<li><a href="#" class="btn-theme btn-small">安康</a></li>
 								<li><a href="#" class="btn-theme btn-small">商洛</a></li>
 							</ul>
-							</ul>
-						</nav>
+						</nav> -->
 						<div class="col-md-12">
 							<div class="row">
 								<div class="portfolio-items isotopeWrapper clearfix" id="3">
 									<volist name="list" id="v">
-									<article class="col-sm-4 isotopeItem webdesign" data-tid="<{$v.xid}>">
+									<article class="col-sm-4 isotopeItem webdesign" data-xid="<{$v.xid}>">
 										<div class="portfolio-item">
-											<img src="__PUBLIC__/assets/images/portfolio/img9.jpg" alt="" />
+											<img src="__ROOT__/<{$v.xbimg}>" alt="" />
 											<div class="portfolio-desc align-center">
 												<div class="folio-info">
 													<a href="__PUBLIC__/assets/images/portfolio/img1.jpg" class="fancybox">
@@ -94,10 +87,11 @@
 				</section>
 			</div>
 		</div>
+
 	</section>
 	<p style="text-align:center;"><{$page}></p>
 	<!-- /container -->
-	 <include file="Public:footer" />
+	<include file="Public:footer" />
 	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
 	<script src="__PUBLIC__/assets/js/jquery.min.js"></script>
 	<script src="__PUBLIC__/assets/js/bootstrap.min.js"></script>

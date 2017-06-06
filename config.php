@@ -10,7 +10,7 @@ return array(
 	'DB_PWD'=>'123456',
 	'DB_PORT'=>'3306',
 	'DB_PREFIX'=>'tp_',
-	'SHOW_PAGE_TRACE'=>true,
+	//'SHOW_PAGE_TRACE'=>true,
 	'APP_STATUS' => 'debug', 
 );
 ?>

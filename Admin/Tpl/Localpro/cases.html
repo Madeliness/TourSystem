@@ -7,8 +7,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
 <!--[if lt IE 9]>
-<script type="text/javascript" src="lib/html5shiv.js"></script>
-<script type="text/javascript" src="lib/respond.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/html5shiv.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/respond.min.js"></script>
 <![endif]-->
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/static/h-ui/css/H-ui.min.css" />
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/static/h-ui.admin/css/H-ui.admin.css" />
@@ -30,15 +30,14 @@
 			<input type="text" onfocus="WdatePicker({ maxDate:'#F{$dp.$D(\'logmax\')||\'%y-%M-%d\'}' })" id="logmin" class="input-text Wdate" style="width:120px;">
 			-
 			<input type="text" onfocus="WdatePicker({ minDate:'#F{$dp.$D(\'logmin\')}',maxDate:'%y-%M-%d' })" id="logmax" class="input-text Wdate" style="width:120px;">
-			<input type="text" name="" id="" placeholder=" 产品名称" style="width:250px" class="input-text">
-			<button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜产品</button>
+			<input type="text" name="" id="" placeholder=" 美食名称" style="width:250px" class="input-text">
+			<button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜美食</button>
 		</div>
-		<div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" onclick="product_del()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a class="btn btn-primary radius" onclick="product_add('__URL__/add?idtype=c')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加美食</a></span> <span class="r">共有数据：<strong><{$count}></strong> 条</span> </div>
+		<div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a class="btn btn-primary radius" onclick="product_add('__URL__/add?idtype=c')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加美食</a></span> <span class="r">共有数据：<strong><{$count}></strong> 条</span> </div>
 		<div class="mt-20 nicesrcoll">
 			<table class="table table-border table-bordered table-bg table-hover table-sort">
 				<thead>
 					<tr class="text-c">
-						<th><input name="" type="checkbox" value=""></th>
 						<th>美食ID</th>
 						<th>美食名称</th>
 						<th>本土城市</th>
@@ -53,7 +52,6 @@
 				<tbody>
 				<volist name="data1" id="v">
 					<tr class="text-c va-m">
-						<td><input name="" type="checkbox" value=""></td>
 						<td><{$v.cid}></td>
 						<td><{$v.cname}></td>
 						<td><{$v.ccity}></td>
@@ -86,10 +84,10 @@
 <script type="text/javascript" src="__PUBLIC__/lib/laypage/1.2/laypage.js"></script>
 <script type="text/javascript">
 $('.table-sort').dataTable({
-	"aaSorting": [[ 1, "desc" ]],//默认第几个排序
+	"aaSorting": [[ 0, "desc" ]],//默认第几个排序
 	"bStateSave": true,//状态保存
 	"aoColumnDefs": [
-	  {"orderable":false,"aTargets":[0,7]}// 制定列不参与排序
+	  {"orderable":false,"aTargets":[7,8]}// 制定列不参与排序
 	]
 });
 /*-添加*/

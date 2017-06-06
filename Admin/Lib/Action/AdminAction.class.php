@@ -23,7 +23,6 @@
 			}
 			$this->assign('count',$sum);
 			$this->assign('result',$arr);
-			//var_dump($arr);
 			$this->display();
 		}
 	}
